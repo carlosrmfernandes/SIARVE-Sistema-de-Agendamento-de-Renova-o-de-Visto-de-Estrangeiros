@@ -7,7 +7,6 @@ package visao;
 
 import control.AcaoInternalFrameCadastro;
 import exception.Excesao;
-import javax.swing.JTextArea;
 import modelo.ModelInternalFrameCadastro;
 
 /**
