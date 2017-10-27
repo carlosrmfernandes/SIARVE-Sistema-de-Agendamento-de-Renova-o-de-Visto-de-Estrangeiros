@@ -18,20 +18,33 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
      * Creates new form CadastroFuncionario
      */
     private AcaoCadastroFuncionario l = new AcaoCadastroFuncionario(this);
-
+    
+    private int celular, cpf;
+    
     public ModelCadastroFuncionario modelcadastro() {
         ModelCadastroFuncionario modelcadastrofunc = new ModelCadastroFuncionario();
         modelcadastrofunc.setEmail(jtfemail.getText());
         modelcadastrofunc.setSenha(jPasswordsenha.getText());
         modelcadastrofunc.setConfsenha(jPasswordConfSenha.getText());
+        modelcadastrofunc.setEndereco(jtfendereco.getText());
+        modelcadastrofunc.setData(jdatacadastro.getDate());
+        modelcadastrofunc.setTipopessoa((String) jcbtipopessoa.getSelectedItem());
+        modelcadastrofunc.setEstado((String) jcbestado.getSelectedItem());
+        modelcadastrofunc.setSexo((String) jcbsexo.getSelectedItem());
+        modelcadastrofunc.setNome(jtfnome.getText());
+        modelcadastrofunc.setEstadociveil((String) jcbestadocivil.getSelectedItem());
+        modelcadastrofunc.setCelular(Integer.parseInt(jtfcelular.getText()));
+        modelcadastrofunc.setCpf(Integer.parseInt(jtfcpf.getText()));
+        
         return modelcadastrofunc;
     }
     
-    public void limpar(){
-    jtfemail.setText("");
-    jPasswordsenha.setText("");
-    jPasswordConfSenha.setText("");
+    public void limpar() {
+        jtfemail.setText("");
+        jPasswordsenha.setText("");
+        jPasswordConfSenha.setText("");
     }
+    
     public CadastroFuncionario() {
         initComponents();
     }
@@ -53,6 +66,24 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
         jbtlimpar = new javax.swing.JButton();
         jPasswordsenha = new javax.swing.JPasswordField();
         jPasswordConfSenha = new javax.swing.JPasswordField();
+        jlbendereco = new javax.swing.JLabel();
+        jtfendereco = new javax.swing.JTextField();
+        jlbcpf = new javax.swing.JLabel();
+        jtfcpf = new javax.swing.JTextField();
+        jdatacadastro = new com.toedter.calendar.JDateChooser();
+        jlbdatacadastro = new javax.swing.JLabel();
+        jlptipopessoa = new javax.swing.JLabel();
+        jcbtipopessoa = new javax.swing.JComboBox<>();
+        jlbestado = new javax.swing.JLabel();
+        jcbestado = new javax.swing.JComboBox<>();
+        jlbcelular = new javax.swing.JLabel();
+        jtfcelular = new javax.swing.JTextField();
+        jlbnome = new javax.swing.JLabel();
+        jtfnome = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jlbsexo = new javax.swing.JLabel();
+        jcbsexo = new javax.swing.JComboBox<>();
+        jcbestadocivil = new javax.swing.JComboBox<>();
 
         setClosable(true);
         setTitle("Cadastro de Funcionário");
@@ -89,56 +120,130 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
             }
         });
 
+        jlbendereco.setText("Endereço");
+
+        jlbcpf.setText("C P F");
+
+        jlbdatacadastro.setText("Data Cadastro");
+
+        jlptipopessoa.setText("Tipo de Pessoa");
+
+        jcbtipopessoa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fisica", "Juridica" }));
+
+        jlbestado.setText("Estado");
+
+        jcbestado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Santa Catarina", "Porto Alegre", "São Paulo", "Rio de Janeiro" }));
+
+        jlbcelular.setText("Celular");
+
+        jlbnome.setText("Nome ");
+
+        jLabel2.setText("Estado Civil");
+
+        jlbsexo.setText("Sexo");
+
+        jcbsexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino"}));
+
+        jcbestadocivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Casada", "Solteira", "Divorciada", "Viuva" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(senha)
+                    .addComponent(email)
+                    .addComponent(confirmarsenha)
+                    .addComponent(jlptipopessoa)
+                    .addComponent(jlbcelular, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbnome)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jtfemail)
+                    .addComponent(jPasswordsenha)
+                    .addComponent(jPasswordConfSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
+                    .addComponent(jcbtipopessoa, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtfcelular)
+                    .addComponent(jtfnome)
+                    .addComponent(jcbestadocivil, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(jbtlimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlbendereco, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlbcpf)
+                            .addComponent(jlbdatacadastro)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlbsexo)
+                            .addComponent(jlbestado))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jbtlimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbtcadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(142, 142, 142)
-                        .addComponent(senha))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtfemail)
-                            .addComponent(jPasswordsenha)
-                            .addComponent(jPasswordConfSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addComponent(email))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addComponent(confirmarsenha)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jdatacadastro, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
+                        .addComponent(jtfendereco)
+                        .addComponent(jtfcpf)
+                        .addComponent(jcbestado, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jcbsexo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(email)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtfemail, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(email)
+                    .addComponent(jlbendereco)
+                    .addComponent(jtfendereco, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jtfemail, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(senha)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jPasswordsenha, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlbcpf)
+                        .addComponent(jtfcpf, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(senha)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordsenha, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(confirmarsenha)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordConfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jPasswordConfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(confirmarsenha)
+                        .addComponent(jlbdatacadastro))
+                    .addComponent(jdatacadastro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jcbestado, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jlptipopessoa)
+                        .addComponent(jcbtipopessoa, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlbestado)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtfcelular, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbcelular)
+                    .addComponent(jlbsexo)
+                    .addComponent(jcbsexo, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jtfnome, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlbnome))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jcbestadocivil, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(0, 11, Short.MAX_VALUE))
                     .addComponent(jbtcadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtlimpar, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))
+                    .addComponent(jbtlimpar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -161,11 +266,29 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel confirmarsenha;
     private javax.swing.JLabel email;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPasswordField jPasswordConfSenha;
     private javax.swing.JPasswordField jPasswordsenha;
     private javax.swing.JButton jbtcadastrar;
     private javax.swing.JButton jbtlimpar;
+    private javax.swing.JComboBox<String> jcbestado;
+    private javax.swing.JComboBox<String> jcbestadocivil;
+    private javax.swing.JComboBox<String> jcbsexo;
+    private javax.swing.JComboBox<String> jcbtipopessoa;
+    private com.toedter.calendar.JDateChooser jdatacadastro;
+    private javax.swing.JLabel jlbcelular;
+    private javax.swing.JLabel jlbcpf;
+    private javax.swing.JLabel jlbdatacadastro;
+    private javax.swing.JLabel jlbendereco;
+    private javax.swing.JLabel jlbestado;
+    private javax.swing.JLabel jlbnome;
+    private javax.swing.JLabel jlbsexo;
+    private javax.swing.JLabel jlptipopessoa;
+    private javax.swing.JTextField jtfcelular;
+    private javax.swing.JTextField jtfcpf;
     private javax.swing.JTextField jtfemail;
+    private javax.swing.JTextField jtfendereco;
+    private javax.swing.JTextField jtfnome;
     private javax.swing.JLabel senha;
     // End of variables declaration//GEN-END:variables
 }

@@ -20,7 +20,7 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
      */
     private AcaoInternalFrameCadastro l = new AcaoInternalFrameCadastro(this);
 
-    public ModelInternalFrameCadastro getModelInternalFrameCadastro() throws Excesao {
+    public ModelInternalFrameCadastro getModelInternalFrameCadastro() throws Excesao{
 
         if ("".equals(jtfcodigosolicitacao.getText())) {
             throw new Excesao("Deve preencher o Codigo de Solicitação");
@@ -35,12 +35,27 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
 
         }
 
+
+        if ("".equals(jtfemail.getText())) {
+            throw new Excesao("Deve preencher o email");
+
+        }
+
+        if ("".equals(jtfcelular.getText())) {
+            throw new Excesao("Deve preencher a o celular");
+
+        }
+
         ModelInternalFrameCadastro modelcadastro = new ModelInternalFrameCadastro();
         modelcadastro.setData(jDate.getDate());
         modelcadastro.setDescricao(jTextAreaDescricao.getText());
-        modelcadastro.setHorario((String) jComboBoxHorario.getSelectedItem());
         modelcadastro.setCodigosolicitacao(Integer.parseInt(jtfcodigosolicitacao.getText()));
 
+        modelcadastro.setHorario((String) jComboBoxHorario.getSelectedItem());
+        modelcadastro.setTipo((String) jcbtipo.getSelectedItem());
+        modelcadastro.setSexo((String) jcbsexo.getSelectedItem());
+        modelcadastro.setEmail(jtfemail.getText());
+        modelcadastro.setCelular(Integer.parseInt(jtfcelular.getText()));
         return modelcadastro;
     }
 
@@ -48,7 +63,9 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
         jtfcodigosolicitacao.setText("");
         jTextAreaDescricao.setText("");
         jDate.setDate(null);
-        jComboBoxHorario.setSelectedItem(null);
+        jtfemail.setText("");
+        jtfcelular.setText("");
+        
 
     }
 
@@ -68,8 +85,15 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jCalendar1 = new com.toedter.calendar.JCalendar();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jlbcodigosolicitacao = new javax.swing.JLabel();
         jtfcodigosolicitacao = new javax.swing.JTextField();
+        try{
+            javax.swing.text.MaskFormatter formataIntervalo = new javax.swing.text.MaskFormatter("##########");
+            jtfcodigosolicitacao = new javax.swing.JFormattedTextField(formataIntervalo);
+        }catch(Exception e){
+
+        }
         jlbdescricao = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaDescricao = new javax.swing.JTextArea();
@@ -80,6 +104,14 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
         jbtnovo = new javax.swing.JButton();
         jbtsalvar = new javax.swing.JButton();
         jbtlimpar = new javax.swing.JButton();
+        jlbtipo = new javax.swing.JLabel();
+        jcbtipo = new javax.swing.JComboBox<>();
+        jlbsexo = new javax.swing.JLabel();
+        jcbsexo = new javax.swing.JComboBox<>();
+        jlbemail = new javax.swing.JLabel();
+        jtfemail = new javax.swing.JTextField();
+        jlbcelular = new javax.swing.JLabel();
+        jtfcelular = new javax.swing.JTextField();
 
         jLabel2.setText("jLabel2");
 
@@ -94,7 +126,7 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
             }
         });
 
-        jlbdescricao.setText("Descrição");
+        jlbdescricao.setText("Descrição da Solicitação");
 
         jTextAreaDescricao.setColumns(20);
         jTextAreaDescricao.setRows(5);
@@ -141,65 +173,113 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
             }
         });
 
+        jlbtipo.setText("Tipo de Fução");
+
+        jcbtipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estudante", "Trabalhador" }));
+
+        jlbsexo.setText("Sexo");
+
+        jcbsexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino" }));
+
+        jlbemail.setText("Email");
+
+        jlbcelular.setText("Celular");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jbtnovo, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jbtsalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jbtlimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jlbcodigosolicitacao)
-                        .addGap(18, 18, 18)
-                        .addComponent(jtfcodigosolicitacao, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlbtipo, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(235, 235, 235)
+                        .addComponent(jlbhorario)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jbtnovo)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jbtsalvar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jbtlimpar))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jDate, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jlbhorario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBoxHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jComboBoxHorario, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jcbsexo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlbcodigosolicitacao)
+                            .addComponent(jlbdescricao))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE)
+                            .addComponent(jtfcodigosolicitacao)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jcbtipo, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jlbdescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlbemail, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlbcelular))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(292, 292, 292)
+                                .addComponent(jlbsexo, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jtfcelular, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE)
+                                    .addComponent(jtfemail, javax.swing.GroupLayout.Alignment.TRAILING))))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlbcodigosolicitacao)
-                    .addComponent(jtfcodigosolicitacao, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jtfcodigosolicitacao, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbcodigosolicitacao))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jlbdescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jlbdescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jComboBoxHorario, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
                         .addComponent(jlbhorario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbtnovo)
-                    .addComponent(jbtsalvar)
-                    .addComponent(jbtlimpar)))
+                    .addComponent(jcbtipo, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbsexo)
+                    .addComponent(jcbsexo, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbtipo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtfemail, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbemail, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtfcelular, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(jlbcelular))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jbtsalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbtnovo, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbtlimpar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         pack();
@@ -224,9 +304,10 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
     private void jComboBoxHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxHorarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxHorarioActionPerformed
-
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private com.toedter.calendar.JCalendar jCalendar1;
     private javax.swing.JComboBox<String> jComboBoxHorario;
     private com.toedter.calendar.JDateChooser jDate;
@@ -237,10 +318,18 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
     private javax.swing.JButton jbtlimpar;
     private javax.swing.JButton jbtnovo;
     private javax.swing.JButton jbtsalvar;
+    private javax.swing.JComboBox<String> jcbsexo;
+    private javax.swing.JComboBox<String> jcbtipo;
+    private javax.swing.JLabel jlbcelular;
     private javax.swing.JLabel jlbcodigosolicitacao;
     private javax.swing.JLabel jlbdescricao;
+    private javax.swing.JLabel jlbemail;
     private javax.swing.JLabel jlbhorario;
+    private javax.swing.JLabel jlbsexo;
+    private javax.swing.JLabel jlbtipo;
+    private javax.swing.JTextField jtfcelular;
     private javax.swing.JTextField jtfcodigosolicitacao;
+    private javax.swing.JTextField jtfemail;
     // End of variables declaration//GEN-END:variables
 
 }

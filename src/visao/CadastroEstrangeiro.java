@@ -24,16 +24,25 @@ public class CadastroEstrangeiro extends javax.swing.JInternalFrame {
 
         modelcadastroest.setNome(jtfNomeCompleto.getText());
         modelcadastroest.setEndereco(jtfEdereco.getText());
-        modelcadastroest.setNumCelular(jtfNmcelular.getText());
+        modelcadastroest.setNumCelular(Integer.parseInt(jtfNmcelular.getText()));
         modelcadastroest.setNumPassaporte(jtfNumPassaport.getText());
+        modelcadastroest.setCpf(Integer.parseInt(jtfcpf.getText()));
+        modelcadastroest.setData(jdata.getDate());
+        modelcadastroest.setEmail(jtfemail.getText());
+        modelcadastroest.setEstado(jtfestado.getText());
+        modelcadastroest.setEstadocivil((String) jcbestadocivil.getSelectedItem());
+        modelcadastroest.setFuncao((String) jcbfuncao.getSelectedItem());
+        modelcadastroest.setLocalfuncao(jtflocalfuncao.getText());
+        modelcadastroest.setSexo((String) jcbsexo.getSelectedItem());
 
         return modelcadastroest;
     }
-    public void limpar(){
-    jtfNomeCompleto.setText("");
-    jtfEdereco.setText("");
-    jtfNmcelular.setText("");
-    jtfNumPassaport.setText("");
+
+    public void limpar() {
+        jtfNomeCompleto.setText("");
+        jtfEdereco.setText("");
+        jtfNmcelular.setText("");
+        jtfNumPassaport.setText("");
     }
 
     public CadastroEstrangeiro() {
@@ -49,26 +58,42 @@ public class CadastroEstrangeiro extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        JlbNomecompleto = new javax.swing.JLabel();
+        jlbendereco = new javax.swing.JLabel();
+        jlbnumeropassaport = new javax.swing.JLabel();
+        jlbNumeroCelular = new javax.swing.JLabel();
         jtfNumPassaport = new javax.swing.JTextField();
         jtfNomeCompleto = new javax.swing.JTextField();
         jtfNmcelular = new javax.swing.JTextField();
         jtfEdereco = new javax.swing.JTextField();
         jbtSalvar = new javax.swing.JButton();
         jbtlimpar = new javax.swing.JButton();
+        jlbfuncao = new javax.swing.JLabel();
+        jcbfuncao = new javax.swing.JComboBox<>();
+        jlbdata = new javax.swing.JLabel();
+        jdata = new com.toedter.calendar.JDateChooser();
+        jlblocalfuncao = new javax.swing.JLabel();
+        jtflocalfuncao = new javax.swing.JTextField();
+        jlbemail = new javax.swing.JLabel();
+        jtfemail = new javax.swing.JTextField();
+        jlbestadocivil = new javax.swing.JLabel();
+        jcbestadocivil = new javax.swing.JComboBox<>();
+        jlbcpf = new javax.swing.JLabel();
+        jtfcpf = new javax.swing.JTextField();
+        jlbestado = new javax.swing.JLabel();
+        jtfestado = new javax.swing.JTextField();
+        jlbsexo = new javax.swing.JLabel();
+        jcbsexo = new javax.swing.JComboBox<>();
 
         setClosable(true);
 
-        jLabel1.setText("Nome Completo");
+        JlbNomecompleto.setText("Nome Completo");
 
-        jLabel2.setText("Endereço");
+        jlbendereco.setText("Endereço");
 
-        jLabel3.setText("Número Passaporte");
+        jlbnumeropassaport.setText("Número Passaporte");
 
-        jLabel4.setText("N' Celular");
+        jlbNumeroCelular.setText("N' Celular");
 
         jbtSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/save.png"))); // NOI18N
         jbtSalvar.addActionListener(l);
@@ -90,6 +115,28 @@ public class CadastroEstrangeiro extends javax.swing.JInternalFrame {
             }
         });
 
+        jlbfuncao.setText("Fução");
+
+        jcbfuncao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estudante", "Trabalhador"}));
+
+        jlbdata.setText("Data Cadastro");
+
+        jlblocalfuncao.setText("Local da Função");
+
+        jlbemail.setText("Email");
+
+        jlbestadocivil.setText("Estado Civil");
+
+        jcbestadocivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Solteiro", "Casada", "Divorcciado", "Viuvo" }));
+
+        jlbcpf.setText("C P F");
+
+        jlbestado.setText("Estado");
+
+        jlbsexo.setText("Sexo");
+
+        jcbsexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino"}));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -97,24 +144,48 @@ public class CadastroEstrangeiro extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 209, Short.MAX_VALUE)
-                        .addComponent(jbtlimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbnumeropassaport)
+                    .addComponent(JlbNomecompleto)
+                    .addComponent(jlbemail, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbestadocivil, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbcpf, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbestado, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbsexo, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jtfestado)
+                    .addComponent(jtfcpf, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jcbestadocivil, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtfemail, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtfNomeCompleto, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtfNumPassaport, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jcbsexo, 0, 261, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 2, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlblocalfuncao)
+                            .addComponent(jlbfuncao))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbtSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jcbfuncao, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jbtlimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jbtSalvar, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                                .addGap(6, 6, 6))
+                            .addComponent(jtflocalfuncao)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel1))
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtfNumPassaport)
-                            .addComponent(jtfNomeCompleto)
-                            .addComponent(jtfNmcelular)
-                            .addComponent(jtfEdereco, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addComponent(jlbdata)
+                            .addComponent(jlbendereco)
+                            .addComponent(jlbNumeroCelular))
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtfEdereco, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jdata, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jtfNmcelular))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -123,23 +194,47 @@ public class CadastroEstrangeiro extends javax.swing.JInternalFrame {
                 .addGap(9, 9, 9)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtfNumPassaport, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(jlbnumeropassaport)
+                    .addComponent(jlbNumeroCelular)
+                    .addComponent(jtfNmcelular, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtfNomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfNmcelular, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
+                    .addComponent(JlbNomecompleto)
+                    .addComponent(jlbendereco)
+                    .addComponent(jtfEdereco, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfEdereco, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jbtlimpar, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
-                    .addComponent(jbtSalvar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jlbemail, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtfemail, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlbdata))
+                    .addComponent(jdata, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jcbfuncao, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbfuncao)
+                    .addComponent(jlbestadocivil)
+                    .addComponent(jcbestadocivil, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(7, 7, 7)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtflocalfuncao, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlblocalfuncao)
+                    .addComponent(jlbcpf)
+                    .addComponent(jtfcpf, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jtfestado, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlbestado, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jcbsexo, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlbsexo)))
+                    .addComponent(jbtlimpar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtSalvar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         pack();
@@ -155,15 +250,31 @@ public class CadastroEstrangeiro extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel JlbNomecompleto;
     private javax.swing.JButton jbtSalvar;
     private javax.swing.JButton jbtlimpar;
+    private javax.swing.JComboBox<String> jcbestadocivil;
+    private javax.swing.JComboBox<String> jcbfuncao;
+    private javax.swing.JComboBox<String> jcbsexo;
+    private com.toedter.calendar.JDateChooser jdata;
+    private javax.swing.JLabel jlbNumeroCelular;
+    private javax.swing.JLabel jlbcpf;
+    private javax.swing.JLabel jlbdata;
+    private javax.swing.JLabel jlbemail;
+    private javax.swing.JLabel jlbendereco;
+    private javax.swing.JLabel jlbestado;
+    private javax.swing.JLabel jlbestadocivil;
+    private javax.swing.JLabel jlbfuncao;
+    private javax.swing.JLabel jlblocalfuncao;
+    private javax.swing.JLabel jlbnumeropassaport;
+    private javax.swing.JLabel jlbsexo;
     private javax.swing.JTextField jtfEdereco;
     private javax.swing.JTextField jtfNmcelular;
     private javax.swing.JTextField jtfNomeCompleto;
     private javax.swing.JTextField jtfNumPassaport;
+    private javax.swing.JTextField jtfcpf;
+    private javax.swing.JTextField jtfemail;
+    private javax.swing.JTextField jtfestado;
+    private javax.swing.JTextField jtflocalfuncao;
     // End of variables declaration//GEN-END:variables
 }

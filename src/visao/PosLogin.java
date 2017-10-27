@@ -47,12 +47,6 @@ public class PosLogin extends javax.swing.JFrame {
         menufile = new javax.swing.JMenu();
         jMenuItemNovo = new javax.swing.JMenuItem();
         jMenuItemSair = new javax.swing.JMenuItem();
-        menusobre = new javax.swing.JMenu();
-        jMenuItemsobre = new javax.swing.JMenuItem();
-        menuajuda = new javax.swing.JMenu();
-        jMenuItemhelp = new javax.swing.JMenuItem();
-        jMenudeveloper = new javax.swing.JMenu();
-        jMenuItemdeveloper = new javax.swing.JMenuItem();
         jMenuRegistro = new javax.swing.JMenu();
         jMenuIteCadastroFuncionario = new javax.swing.JMenuItem();
         jMenuItemCadastroEstrangeiro = new javax.swing.JMenuItem();
@@ -60,6 +54,12 @@ public class PosLogin extends javax.swing.JFrame {
         jMenuItemchecarFunc = new javax.swing.JMenuItem();
         jMenuItemchecarAgendamento = new javax.swing.JMenuItem();
         jMenuItemchecarEstr = new javax.swing.JMenuItem();
+        menusobre = new javax.swing.JMenu();
+        jMenuItemsobre = new javax.swing.JMenuItem();
+        menuajuda = new javax.swing.JMenu();
+        jMenuItemhelp = new javax.swing.JMenuItem();
+        jMenudeveloper = new javax.swing.JMenu();
+        jMenuItemdeveloper = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -90,6 +90,64 @@ public class PosLogin extends javax.swing.JFrame {
         menufile.add(jMenuItemSair);
 
         jMenuBar1.add(menufile);
+
+        jMenuRegistro.setText("Cadastro ");
+
+        jMenuIteCadastroFuncionario.setText("Cadastro Funcionário");
+        jMenuIteCadastroFuncionario.addActionListener(l);
+        jMenuIteCadastroFuncionario.setActionCommand("cadastroFuncionario");
+        jMenuIteCadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuIteCadastroFuncionarioActionPerformed(evt);
+            }
+        });
+        jMenuRegistro.add(jMenuIteCadastroFuncionario);
+
+        jMenuItemCadastroEstrangeiro.setText("Cadastro Estrangeiro");
+        jMenuItemCadastroEstrangeiro.addActionListener(l);
+        jMenuItemCadastroEstrangeiro.setActionCommand("cadastroestrangeiro");
+        jMenuItemCadastroEstrangeiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCadastroEstrangeiroActionPerformed(evt);
+            }
+        });
+        jMenuRegistro.add(jMenuItemCadastroEstrangeiro);
+
+        jMenuBar1.add(jMenuRegistro);
+
+        jMenuchecarCadastro.setText("Checagem / Remover Funcionário");
+
+        jMenuItemchecarFunc.setText("Remover Funcionário");
+        jMenuItemchecarFunc.addActionListener(l);
+        jMenuItemchecarFunc.setActionCommand("checarfunc");
+        jMenuItemchecarFunc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemchecarFuncActionPerformed(evt);
+            }
+        });
+        jMenuchecarCadastro.add(jMenuItemchecarFunc);
+
+        jMenuItemchecarAgendamento.setText("Checar Agendamento");
+        jMenuItemchecarAgendamento.addActionListener(l);
+        jMenuItemchecarAgendamento.setActionCommand("checaragendamento");
+        jMenuItemchecarAgendamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemchecarAgendamentoActionPerformed(evt);
+            }
+        });
+        jMenuchecarCadastro.add(jMenuItemchecarAgendamento);
+
+        jMenuItemchecarEstr.setText("Checar dastro Estrangeiro");
+        jMenuItemchecarEstr.addActionListener(l);
+        jMenuItemchecarEstr.setActionCommand("checarestr");
+        jMenuItemchecarEstr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemchecarEstrActionPerformed(evt);
+            }
+        });
+        jMenuchecarCadastro.add(jMenuItemchecarEstr);
+
+        jMenuBar1.add(jMenuchecarCadastro);
 
         menusobre.setText("Sobre");
         menusobre.addActionListener(new java.awt.event.ActionListener() {
@@ -147,64 +205,6 @@ public class PosLogin extends javax.swing.JFrame {
         jMenudeveloper.add(jMenuItemdeveloper);
 
         jMenuBar1.add(jMenudeveloper);
-
-        jMenuRegistro.setText("Cadastro");
-
-        jMenuIteCadastroFuncionario.setText("Cadastro Funcionário");
-        jMenuIteCadastroFuncionario.addActionListener(l);
-        jMenuIteCadastroFuncionario.setActionCommand("cadastroFuncionario");
-        jMenuIteCadastroFuncionario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuIteCadastroFuncionarioActionPerformed(evt);
-            }
-        });
-        jMenuRegistro.add(jMenuIteCadastroFuncionario);
-
-        jMenuItemCadastroEstrangeiro.setText("Cadastro Estrangeiro");
-        jMenuItemCadastroEstrangeiro.addActionListener(l);
-        jMenuItemCadastroEstrangeiro.setActionCommand("cadastroestrangeiro");
-        jMenuItemCadastroEstrangeiro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemCadastroEstrangeiroActionPerformed(evt);
-            }
-        });
-        jMenuRegistro.add(jMenuItemCadastroEstrangeiro);
-
-        jMenuBar1.add(jMenuRegistro);
-
-        jMenuchecarCadastro.setText("Checagem / Remover Funcionário");
-
-        jMenuItemchecarFunc.setText("Remover Funcionário");
-        jMenuItemchecarFunc.addActionListener(l);
-        jMenuItemchecarFunc.setActionCommand("checarfunc");
-        jMenuItemchecarFunc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemchecarFuncActionPerformed(evt);
-            }
-        });
-        jMenuchecarCadastro.add(jMenuItemchecarFunc);
-
-        jMenuItemchecarAgendamento.setText("Checar Agendamento");
-        jMenuItemchecarAgendamento.addActionListener(l);
-        jMenuItemchecarAgendamento.setActionCommand("checaragendamento");
-        jMenuItemchecarAgendamento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemchecarAgendamentoActionPerformed(evt);
-            }
-        });
-        jMenuchecarCadastro.add(jMenuItemchecarAgendamento);
-
-        jMenuItemchecarEstr.setText("Checar dastro Estrangeiro");
-        jMenuItemchecarEstr.addActionListener(l);
-        jMenuItemchecarEstr.setActionCommand("checarestr");
-        jMenuItemchecarEstr.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemchecarEstrActionPerformed(evt);
-            }
-        });
-        jMenuchecarCadastro.add(jMenuItemchecarEstr);
-
-        jMenuBar1.add(jMenuchecarCadastro);
 
         setJMenuBar(jMenuBar1);
 

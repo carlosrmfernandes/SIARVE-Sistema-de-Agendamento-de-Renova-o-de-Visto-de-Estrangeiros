@@ -15,7 +15,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
-
 /**
  *
  * @author CarlosFernandes
@@ -23,8 +22,8 @@ import javax.swing.JOptionPane;
 public class AcaoInternalFrameCadastro implements ActionListener {
 
     private Date data;
-    private String Descricao, horario;
-    private int codigosolicitacao;
+    private String Descricao, horario, tipo, sexo, email;
+    private int codigosolicitacao, celular;
     private PosLogin novo;
     private ModelInternalFrameCadastro intelnalframecadastro;
     private InternalFrameCadastro cadastro;
@@ -33,7 +32,7 @@ public class AcaoInternalFrameCadastro implements ActionListener {
         this.cadastro = cadastro;
 
     }
-    
+
     public void actionPerformed(ActionEvent e) {
 
         if ("salvar".equals(e.getActionCommand())) {
@@ -47,13 +46,21 @@ public class AcaoInternalFrameCadastro implements ActionListener {
             Descricao = intelnalframecadastro.getDescricao();
             data = intelnalframecadastro.getData();
             horario = intelnalframecadastro.getHorario();
+            tipo = intelnalframecadastro.getTipo();
+            sexo = intelnalframecadastro.getSexo();
+            email = intelnalframecadastro.getEmail();
+            celular = intelnalframecadastro.getCelular();
 
             SimpleDateFormat deteformat = new SimpleDateFormat("dd/MM/yyyy");
             String dataformatada = deteformat.format(data);
             System.out.println("Codigo de Solicitão :" + codigosolicitacao + ""
                     + "\nDescrição :" + Descricao
                     + "\nData :" + dataformatada
-                    + "\nHorário :" + horario);
+                    + "\nHorário :" + horario + ""
+                    + "\n Tipo :" + tipo + ""
+                    + "\nSexo :" + sexo + ""
+                    + "\nEmail :" + email + ""
+                    + "\nCelualr : " + celular);
 
         }
         if ("limpar".equals(e.getActionCommand())) {

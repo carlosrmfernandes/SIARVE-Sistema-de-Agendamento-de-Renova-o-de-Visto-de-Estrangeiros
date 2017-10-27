@@ -14,11 +14,43 @@ import java.util.Date;
 public class ModelInternalFrameCadastro {
 
     private Date data;
-    private String Descricao, horario;
-    private int codigosolicitacao;
+    private String Descricao, horario,tipo,sexo,email;
+    private int codigosolicitacao,celular;
+
+    public int getCelular() {
+        return celular;
+    }
+
+    public void setCelular(int celular) {
+        this.celular = celular;
+    }
 
     public int getCodigosolicitacao() {
         return codigosolicitacao;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setCodigosolicitacao(int codigosolicitacao) {

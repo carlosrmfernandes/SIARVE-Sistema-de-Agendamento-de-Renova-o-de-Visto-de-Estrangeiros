@@ -25,27 +25,56 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="209" max="32767" attributes="0"/>
-                      <Component id="jbtlimpar" min="-2" pref="119" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jbtSalvar" min="-2" pref="115" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
+                  <Component id="jlbnumeropassaport" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlbNomecompleto" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlbemail" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                  <Component id="jlbestadocivil" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                  <Component id="jlbcpf" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
+                  <Component id="jlbestado" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
+                  <Component id="jlbsexo" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="jtfestado" max="32767" attributes="0"/>
+                  <Component id="jtfcpf" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jcbestadocivil" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jtfemail" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jtfNomeCompleto" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jtfNumPassaport" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jcbsexo" pref="261" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="0" pref="2" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlblocalfuncao" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlbfuncao" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jtfNumPassaport" max="32767" attributes="0"/>
-                          <Component id="jtfNomeCompleto" max="32767" attributes="0"/>
-                          <Component id="jtfNmcelular" max="32767" attributes="0"/>
-                          <Component id="jtfEdereco" pref="281" max="32767" attributes="0"/>
+                          <Component id="jcbfuncao" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jbtlimpar" min="-2" pref="106" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jbtSalvar" pref="100" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jtflocalfuncao" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jlbdata" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlbendereco" min="-2" max="-2" attributes="0"/>
+                          <Component id="jlbNumeroCelular" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jtfEdereco" alignment="1" max="32767" attributes="0"/>
+                          <Component id="jdata" max="32767" attributes="0"/>
+                          <Component id="jtfNmcelular" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -54,53 +83,82 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jtfNumPassaport" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlbnumeropassaport" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlbNumeroCelular" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jtfNmcelular" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jtfNomeCompleto" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jtfNmcelular" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JlbNomecompleto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlbendereco" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jtfEdereco" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jtfEdereco" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jbtlimpar" pref="54" max="32767" attributes="0"/>
-                  <Component id="jbtSalvar" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlbemail" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                      <Component id="jtfemail" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="jlbdata" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jdata" min="-2" pref="40" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jcbfuncao" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="jlbfuncao" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlbestadocivil" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcbestadocivil" alignment="1" min="-2" pref="38" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jtflocalfuncao" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="jlblocalfuncao" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jlbcpf" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jtfcpf" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jtfestado" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                          <Component id="jlbestado" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jcbsexo" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                          <Component id="jlbsexo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jbtlimpar" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jbtSalvar" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace pref="14" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="JlbNomecompleto">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nome Completo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="jlbendereco">
       <Properties>
         <Property name="text" type="java.lang.String" value="Endere&#xe7;o"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="jlbnumeropassaport">
       <Properties>
         <Property name="text" type="java.lang.String" value="N&#xfa;mero Passaporte"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="jlbNumeroCelular">
       <Properties>
         <Property name="text" type="java.lang.String" value="N&apos; Celular"/>
       </Properties>
@@ -134,6 +192,86 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtlimparActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbfuncao">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fu&#xe7;&#xe3;o"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jcbfuncao">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Estudante&quot;, &quot;Trabalhador&quot;})" type="code"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbdata">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Data Cadastro"/>
+      </Properties>
+    </Component>
+    <Component class="com.toedter.calendar.JDateChooser" name="jdata">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlblocalfuncao">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Local da Fun&#xe7;&#xe3;o"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtflocalfuncao">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbemail">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Email"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtfemail">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbestadocivil">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Estado Civil"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jcbestadocivil">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Solteiro&quot;, &quot;Casada&quot;, &quot;Divorcciado&quot;, &quot;Viuvo&quot; })" type="code"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbcpf">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="C P F"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtfcpf">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbestado">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Estado"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtfestado">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbsexo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sexo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jcbsexo">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Masculino&quot;, &quot;Femenino&quot;})" type="code"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>
