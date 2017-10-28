@@ -6,6 +6,7 @@
 package visao;
 
 import control.AcaoCadastroFuncionario;
+import exception.Excesao;
 import modelo.ModelCadastroFuncionario;
 
 /**
@@ -18,10 +19,42 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
      * Creates new form CadastroFuncionario
      */
     private AcaoCadastroFuncionario l = new AcaoCadastroFuncionario(this);
-    
-    private int celular, cpf;
-    
-    public ModelCadastroFuncionario modelcadastro() {
+
+    public ModelCadastroFuncionario modelcadastro() throws Excesao {
+
+        if ("".equals(jtfemail.getText())) {
+            throw new Excesao(" Deve preencher o email ");
+
+        }
+        if ("".equals(jtfendereco.getText())) {
+            throw new Excesao(" Deve preencher o endereço ");
+
+        }
+        if ("".equals(jPasswordsenha.getText())) {
+            throw new Excesao(" Deve preencher o senha ");
+
+        }
+        if ("".equals(jtfcpf.getText())) {
+            throw new Excesao(" Deve preencher o CPF ");
+
+        }
+        if ("".equals(jPasswordConfSenha.getText())) {
+            throw new Excesao(" Deve confirmar o senha ");
+
+        }
+        if (jdatacadastro.getDate() == null) {
+            throw new Excesao(" Deve preencher a Data de cadastro ");
+
+        }
+        if ("".equals(jtfcelular.getText())) {
+            throw new Excesao(" Deve preencher o celular ");
+
+        }
+        if ("".equals(jtfnome.getText())) {
+            throw new Excesao(" Deve preencher o nome ");
+
+        }
+
         ModelCadastroFuncionario modelcadastrofunc = new ModelCadastroFuncionario();
         modelcadastrofunc.setEmail(jtfemail.getText());
         modelcadastrofunc.setSenha(jPasswordsenha.getText());
@@ -33,18 +66,23 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
         modelcadastrofunc.setSexo((String) jcbsexo.getSelectedItem());
         modelcadastrofunc.setNome(jtfnome.getText());
         modelcadastrofunc.setEstadociveil((String) jcbestadocivil.getSelectedItem());
-        modelcadastrofunc.setCelular(Integer.parseInt(jtfcelular.getText()));
-        modelcadastrofunc.setCpf(Integer.parseInt(jtfcpf.getText()));
-        
+        modelcadastrofunc.setCelular(jtfcelular.getText());
+        modelcadastrofunc.setCpf(jtfcpf.getText());
+
         return modelcadastrofunc;
     }
-    
+
     public void limpar() {
         jtfemail.setText("");
         jPasswordsenha.setText("");
         jPasswordConfSenha.setText("");
+        jtfendereco.setText("");
+        jtfcpf.setText("");
+        jtfcelular.setText("");
+        jtfnome.setText("");
+        jdatacadastro.setDate(null);
     }
-    
+
     public CadastroFuncionario() {
         initComponents();
     }
@@ -70,6 +108,13 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
         jtfendereco = new javax.swing.JTextField();
         jlbcpf = new javax.swing.JLabel();
         jtfcpf = new javax.swing.JTextField();
+        try{
+            javax.swing.text.MaskFormatter formataIntervalo = new javax.swing.text.MaskFormatter("###.###.###-##");
+            jtfcpf = new javax.swing.JFormattedTextField(formataIntervalo);
+        }catch(Exception e){
+
+        }
+
         jdatacadastro = new com.toedter.calendar.JDateChooser();
         jlbdatacadastro = new javax.swing.JLabel();
         jlptipopessoa = new javax.swing.JLabel();
@@ -78,6 +123,13 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
         jcbestado = new javax.swing.JComboBox<>();
         jlbcelular = new javax.swing.JLabel();
         jtfcelular = new javax.swing.JTextField();
+        try{
+            javax.swing.text.MaskFormatter formataIntervalo = new javax.swing.text.MaskFormatter("(##)#########");
+            jtfcelular = new javax.swing.JFormattedTextField(formataIntervalo);
+        }catch(Exception e){
+
+        }
+
         jlbnome = new javax.swing.JLabel();
         jtfnome = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -205,12 +257,11 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
                     .addComponent(jlbendereco)
                     .addComponent(jtfendereco, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(senha)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jPasswordsenha, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jlbcpf)
-                        .addComponent(jtfcpf, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPasswordsenha, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbcpf)
+                    .addComponent(jtfcpf, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(senha))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

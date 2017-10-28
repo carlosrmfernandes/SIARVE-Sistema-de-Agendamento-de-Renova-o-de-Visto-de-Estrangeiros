@@ -22,8 +22,8 @@ import javax.swing.JOptionPane;
 public class AcaoInternalFrameCadastro implements ActionListener {
 
     private Date data;
-    private String Descricao, horario, tipo, sexo, email;
-    private int codigosolicitacao, celular;
+    private String Descricao, horario, tipo, sexo, email,celular;
+    private int codigosolicitacao;
     private PosLogin novo;
     private ModelInternalFrameCadastro intelnalframecadastro;
     private InternalFrameCadastro cadastro;
@@ -57,7 +57,7 @@ public class AcaoInternalFrameCadastro implements ActionListener {
                     + "\nDescrição :" + Descricao
                     + "\nData :" + dataformatada
                     + "\nHorário :" + horario + ""
-                    + "\n Tipo :" + tipo + ""
+                    + "\nTipo :" + tipo + ""
                     + "\nSexo :" + sexo + ""
                     + "\nEmail :" + email + ""
                     + "\nCelualr : " + celular);

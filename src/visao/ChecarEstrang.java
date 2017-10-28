@@ -6,6 +6,7 @@
 package visao;
 
 import control.AcaochecarEstrang;
+import exception.Excesao;
 import modelo.ModelChecarEstrang;
 
 /**
@@ -21,7 +22,12 @@ public class ChecarEstrang extends javax.swing.JInternalFrame {
     public ChecarEstrang() {
         initComponents();
     }
-    public ModelChecarEstrang getModelChecarestrang() {
+    public ModelChecarEstrang getModelChecarestrang() throws Excesao{
+        if ("".equals(jtfnumpassap.getText())) {
+            throw new Excesao("Deve preencher o Numero do Passaporte");
+
+        }
+        
         ModelChecarEstrang modelchecarestrang = new ModelChecarEstrang();
         modelchecarestrang.setNumpassap(jtfnumpassap.getText());
         return modelchecarestrang;

@@ -6,6 +6,7 @@
 package visao;
 
 import control.AcaoChecarFunc;
+import exception.Excesao;
 import modelo.ModelChecarFunc;
 
 /**
@@ -19,7 +20,13 @@ public class ChecarFunc extends javax.swing.JInternalFrame {
      */
     private AcaoChecarFunc l = new AcaoChecarFunc(this);
 
-    public ModelChecarFunc getModelChecarFunc() {
+    public ModelChecarFunc getModelChecarFunc() throws Excesao {
+       
+        if ("".equals(jtfemail.getText())) {
+            throw new Excesao("Deve preencher o email");
+
+        }
+
         ModelChecarFunc modelchecarfunc = new ModelChecarFunc();
         modelchecarfunc.setEmail(jtfemail.getText());
         return modelchecarfunc;

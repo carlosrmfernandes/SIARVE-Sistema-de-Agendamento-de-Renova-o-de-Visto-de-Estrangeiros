@@ -20,7 +20,7 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
      */
     private AcaoInternalFrameCadastro l = new AcaoInternalFrameCadastro(this);
 
-    public ModelInternalFrameCadastro getModelInternalFrameCadastro() throws Excesao{
+    public ModelInternalFrameCadastro getModelInternalFrameCadastro() throws Excesao {
 
         if ("".equals(jtfcodigosolicitacao.getText())) {
             throw new Excesao("Deve preencher o Codigo de Solicitação");
@@ -35,13 +35,12 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
 
         }
 
-
         if ("".equals(jtfemail.getText())) {
             throw new Excesao("Deve preencher o email");
 
         }
 
-        if ("".equals(jtfcelular.getText())) {
+        if (jtfcelular.getText() == null) {
             throw new Excesao("Deve preencher a o celular");
 
         }
@@ -55,7 +54,7 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
         modelcadastro.setTipo((String) jcbtipo.getSelectedItem());
         modelcadastro.setSexo((String) jcbsexo.getSelectedItem());
         modelcadastro.setEmail(jtfemail.getText());
-        modelcadastro.setCelular(Integer.parseInt(jtfcelular.getText()));
+        modelcadastro.setCelular(jtfcelular.getText());
         return modelcadastro;
     }
 
@@ -65,7 +64,6 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
         jDate.setDate(null);
         jtfemail.setText("");
         jtfcelular.setText("");
-        
 
     }
 
@@ -88,12 +86,6 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         jlbcodigosolicitacao = new javax.swing.JLabel();
         jtfcodigosolicitacao = new javax.swing.JTextField();
-        try{
-            javax.swing.text.MaskFormatter formataIntervalo = new javax.swing.text.MaskFormatter("##########");
-            jtfcodigosolicitacao = new javax.swing.JFormattedTextField(formataIntervalo);
-        }catch(Exception e){
-
-        }
         jlbdescricao = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaDescricao = new javax.swing.JTextArea();
@@ -112,6 +104,12 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
         jtfemail = new javax.swing.JTextField();
         jlbcelular = new javax.swing.JLabel();
         jtfcelular = new javax.swing.JTextField();
+        try{
+            javax.swing.text.MaskFormatter formataIntervalo = new javax.swing.text.MaskFormatter("(##)#########");
+            jtfcelular = new javax.swing.JFormattedTextField(formataIntervalo);
+        }catch(Exception e){
+
+        }
 
         jLabel2.setText("jLabel2");
 
@@ -123,6 +121,11 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
         jtfcodigosolicitacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfcodigosolicitacaoActionPerformed(evt);
+            }
+        });
+        jtfcodigosolicitacao.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfcodigosolicitacaoKeyTyped(evt);
             }
         });
 
@@ -241,12 +244,12 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtfcodigosolicitacao, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jlbcodigosolicitacao))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
+                        .addGap(38, 38, 38)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -279,7 +282,7 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
                         .addComponent(jbtsalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jbtnovo, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jbtlimpar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -304,7 +307,16 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
     private void jComboBoxHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxHorarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxHorarioActionPerformed
-   
+
+    private void jtfcodigosolicitacaoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfcodigosolicitacaoKeyTyped
+        // TODO add your handling code here:
+        int codigosolicitacao = evt.getKeyChar();
+        if (!(codigosolicitacao >= 48 && codigosolicitacao <= 57)) {
+            evt.consume();
+
+        }
+    }//GEN-LAST:event_jtfcodigosolicitacaoKeyTyped
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;

@@ -6,6 +6,7 @@
 package visao;
 
 import control.AcaoChecarAgendamento;
+import exception.Excesao;
 import modelo.ModelChecarAgendamento;
 
 /**
@@ -19,7 +20,12 @@ public class ChecarAgendamento extends javax.swing.JInternalFrame {
      */
     private AcaoChecarAgendamento l = new AcaoChecarAgendamento(this);
 
-    public ModelChecarAgendamento modelchegaragendamento() {
+    public ModelChecarAgendamento modelchegaragendamento() throws Excesao {
+
+        if ("".equals(tfpesquisa.getText())) {
+            throw new Excesao("Deve preencher o Codigo de Solicitação");
+
+        }
 
         ModelChecarAgendamento checaragen = new ModelChecarAgendamento();
         checaragen.setCodigosolicitacao(Integer.parseInt(tfpesquisa.getText()));
@@ -27,8 +33,9 @@ public class ChecarAgendamento extends javax.swing.JInternalFrame {
         return checaragen;
 
     }
-    public void limpar(){
-    tfpesquisa.setText("");
+
+    public void limpar() {
+        tfpesquisa.setText("");
     }
 
     public ChecarAgendamento() {
@@ -59,6 +66,11 @@ public class ChecarAgendamento extends javax.swing.JInternalFrame {
         tfpesquisa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfpesquisaActionPerformed(evt);
+            }
+        });
+        tfpesquisa.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tfpesquisaKeyTyped(evt);
             }
         });
 
@@ -160,6 +172,14 @@ public class ChecarAgendamento extends javax.swing.JInternalFrame {
     private void btbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbuscarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btbuscarActionPerformed
+
+    private void tfpesquisaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfpesquisaKeyTyped
+        int codigosolicitacao = evt.getKeyChar();
+        if (!(codigosolicitacao >= 48 && codigosolicitacao <= 57)) {
+            evt.consume();
+        }
+
+    }//GEN-LAST:event_tfpesquisaKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

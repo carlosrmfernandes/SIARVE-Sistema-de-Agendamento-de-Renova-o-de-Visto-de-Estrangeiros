@@ -5,12 +5,15 @@
  */
 package control;
 
+import exception.Excesao;
 import modelo.ModelCadastroFuncionario;
 import visao.CadastroFuncionario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,9 +23,8 @@ import javax.swing.JOptionPane;
 public class AcaoCadastroFuncionario implements ActionListener {
 
     private CadastroFuncionario cadastroFuncionario;
-    private String email, senha, confsenha, endereco, tipopessoa, estado, sexo, nome, estadociveil;
+    private String email, senha, confsenha, endereco, tipopessoa, estado, sexo, nome, estadociveil, celular, cpf;
     private Date data;
-    private int celular, cpf;
     private ModelCadastroFuncionario modelCadastroFuncionario;
 
     public AcaoCadastroFuncionario(CadastroFuncionario cadastroFuncionario) {
@@ -30,8 +32,14 @@ public class AcaoCadastroFuncionario implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        modelCadastroFuncionario = cadastroFuncionario.modelcadastro();
+
         if ("salvar".equals(e.getActionCommand())) {
+            try {
+                modelCadastroFuncionario = cadastroFuncionario.modelcadastro();
+            } catch (Excesao ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+                return;
+            }
 
             email = modelCadastroFuncionario.getEmail();
             senha = modelCadastroFuncionario.getSenha();

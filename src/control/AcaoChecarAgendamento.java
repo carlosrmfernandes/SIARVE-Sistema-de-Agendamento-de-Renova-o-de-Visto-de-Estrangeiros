@@ -5,10 +5,13 @@
  */
 package control;
 
+import exception.Excesao;
 import modelo.ModelChecarAgendamento;
 import visao.ChecarAgendamento;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -26,17 +29,28 @@ public class AcaoChecarAgendamento implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        modelchecaragendamento = checaragendamento.modelchegaragendamento();
 
         if ("buscar".equals(e.getActionCommand())) {
+            try {
+                modelchecaragendamento = checaragendamento.modelchegaragendamento();
+            } catch (Excesao ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+                return;
+            }
 
             pesquisar = modelchecaragendamento.getCodigosolicitacao();
             System.out.println("Codigo :" + pesquisar);
 
         }
         if ("apagar".equals(e.getActionCommand())) {
+            try {
+                modelchecaragendamento = checaragendamento.modelchegaragendamento();
+            } catch (Excesao ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+                return;
+            }
             pesquisar = modelchecaragendamento.getCodigosolicitacao();
-            JOptionPane.showMessageDialog(null, "Don't have fuction " + " < " + pesquisar + " > ");
+            JOptionPane.showMessageDialog(null, " Não foi implementado essa função ");
 
         }
         if ("limpar".equals(e.getActionCommand())) {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
   <NonVisualComponents>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
@@ -103,13 +103,13 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jtfcodigosolicitacao" min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="jlbcodigosolicitacao" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jtfcodigosolicitacao" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="jlbcodigosolicitacao" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="111" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                   </Group>
@@ -152,7 +152,7 @@
                   </Group>
                   <Component id="jbtlimpar" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="14" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -166,10 +166,8 @@
     <Component class="javax.swing.JTextField" name="jtfcodigosolicitacao">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfcodigosolicitacaoActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jtfcodigosolicitacaoKeyTyped"/>
       </Events>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="try{&#xa;javax.swing.text.MaskFormatter formataIntervalo = new javax.swing.text.MaskFormatter(&quot;##########&quot;);&#xa;jtfcodigosolicitacao = new javax.swing.JFormattedTextField(formataIntervalo);&#xa;}catch(Exception e){&#xa;&#xa;} "/>
-      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jlbdescricao">
       <Properties>
@@ -302,6 +300,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jtfcelular">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="try{&#xa;javax.swing.text.MaskFormatter formataIntervalo = new javax.swing.text.MaskFormatter(&quot;(##)#########&quot;);&#xa;jtfcelular = new javax.swing.JFormattedTextField(formataIntervalo);&#xa;}catch(Exception e){&#xa;&#xa;} &#xa;&#xa;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

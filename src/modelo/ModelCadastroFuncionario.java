@@ -13,10 +13,26 @@ import java.util.Date;
  */
 public class ModelCadastroFuncionario {
 
-    private String email, senha, confsenha, endereco, tipopessoa, estado, sexo, nome, estadociveil;
+    private String email, senha, confsenha, endereco, tipopessoa, estado, sexo, nome, estadociveil,celular, cpf;
     private Date data;
-    private int celular, cpf;
 
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    
     public Date getData() {
         return data;
     }
@@ -77,22 +93,6 @@ public class ModelCadastroFuncionario {
 
     public void setEstadociveil(String estadociveil) {
         this.estadociveil = estadociveil;
-    }
-
-    public int getCelular() {
-        return celular;
-    }
-
-    public void setCelular(int celular) {
-        this.celular = celular;
-    }
-
-    public int getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(int cpf) {
-        this.cpf = cpf;
     }
 
     public void setEmail(String email) {

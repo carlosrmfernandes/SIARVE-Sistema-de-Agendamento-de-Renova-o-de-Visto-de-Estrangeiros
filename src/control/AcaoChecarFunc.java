@@ -5,6 +5,7 @@
  */
 package control;
 
+import exception.Excesao;
 import modelo.ModelChecarFunc;
 import visao.ChecarFunc;
 import java.awt.event.ActionEvent;
@@ -26,11 +27,16 @@ public class AcaoChecarFunc implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        modelchecarFunc = checarfunc.getModelChecarFunc();
 
         if ("apagar".equals(e.getActionCommand())) {
-            email = modelchecarFunc.getEmail();
-            JOptionPane.showMessageDialog(null, "Don't have fuction " + " < " + email + " > ");
+            try {
+                modelchecarFunc = checarfunc.getModelChecarFunc();
+            } catch (Excesao ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+                return;
+            }
+            
+            JOptionPane.showMessageDialog(null, " Não foi implementado essa função ");
         }
     }
 
