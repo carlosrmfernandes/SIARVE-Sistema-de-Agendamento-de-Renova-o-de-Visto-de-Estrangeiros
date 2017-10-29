@@ -11,7 +11,7 @@ import modelo.ModelInternalFrameCadastro;
 
 /**
  *
- * @author aristoteleslopes
+ * @author CarlosFernandes
  */
 public class InternalFrameCadastro extends javax.swing.JInternalFrame {
 

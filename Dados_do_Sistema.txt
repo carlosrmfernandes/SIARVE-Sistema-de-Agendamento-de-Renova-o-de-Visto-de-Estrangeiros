@@ -1,0 +1,9 @@
+29/10/2017 02:16:36  fr Logou No Sistema 
+29/10/2017 02:16:42 Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+29/10/2017 02:16:48 Limpou o Campos da Pesquisa de Agendamento
+29/10/2017 02:16:52 Entrou na Opção Arquivo Sair - Encerrando o Sistema
+========================================================================
+29/10/2017 20:06:06  fr Logou No Sistema 
+29/10/2017 20:06:15 Entrou na Opção Arquivo Novo - Agendamento do visto
+29/10/2017 20:07:06 Agendou a Renovação do visto com o Codigo de codigosolicitacao 23
+29/10/2017 20:10:57 Limpou os Campos de Agendamento

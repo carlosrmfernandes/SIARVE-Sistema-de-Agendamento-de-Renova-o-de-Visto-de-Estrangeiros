@@ -108,11 +108,13 @@
                   <Component id="jdata" min="-2" pref="40" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jcbfuncao" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="jlbfuncao" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jlbestadocivil" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jcbestadocivil" alignment="1" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jcbfuncao" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                      <Component id="jlbfuncao" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jlbestadocivil" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -168,6 +170,9 @@
     <Component class="javax.swing.JTextField" name="jtfNomeCompleto">
     </Component>
     <Component class="javax.swing.JTextField" name="jtfNmcelular">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="try{&#xa;javax.swing.text.MaskFormatter formataIntervalo = new javax.swing.text.MaskFormatter(&quot;(##)#########&quot;);&#xa;jtfNmcelular = new javax.swing.JFormattedTextField(formataIntervalo);&#xa;}catch(Exception e){&#xa;&#xa;} &#xa;&#xa;"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="jtfEdereco">
     </Component>
@@ -250,6 +255,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jtfcpf">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="try{&#xa;javax.swing.text.MaskFormatter formataIntervalo = new javax.swing.text.MaskFormatter(&quot;###.###.###-##&quot;);&#xa;jtfcpf = new javax.swing.JFormattedTextField(formataIntervalo);&#xa;}catch(Exception e){&#xa;&#xa;} &#xa;&#xa;"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jlbestado">
       <Properties>

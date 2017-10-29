@@ -10,10 +10,9 @@ import modelo.ModelCadastroFuncionario;
 import visao.CadastroFuncionario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -26,9 +25,18 @@ public class AcaoCadastroFuncionario implements ActionListener {
     private String email, senha, confsenha, endereco, tipopessoa, estado, sexo, nome, estadociveil, celular, cpf;
     private Date data;
     private ModelCadastroFuncionario modelCadastroFuncionario;
+    private DadosdoSistemas dados = new DadosdoSistemas();
+    private String Dados = null;
+    private String nomeArquivo = "Dados_do_Sistema.txt";
 
     public AcaoCadastroFuncionario(CadastroFuncionario cadastroFuncionario) {
         this.cadastroFuncionario = cadastroFuncionario;
+    }
+
+    private String getDateTime() {
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        return dateFormat.format(date);
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -59,6 +67,10 @@ public class AcaoCadastroFuncionario implements ActionListener {
             String dataformatada = deteformat.format(data);
 
             if (senha.equals(confsenha)) {
+
+                Dados = getDateTime() + " Foi Cadastrado No Sistema O Funcionário " + nome;
+                dados.gravarArquivodadossistema(nomeArquivo, Dados);
+
                 System.out.println("Email :" + email + ""
                         + "\nSenha :" + senha + ""
                         + "\nEdereco : " + endereco + ""
@@ -71,12 +83,16 @@ public class AcaoCadastroFuncionario implements ActionListener {
                         + "\nCelular : " + celular + ""
                         + "\nCPF :" + cpf);
             } else {
+                Dados = getDateTime() + " Erro No Cadastrado do Funcionário Porque as senhas São Diferentes ";
+                dados.gravarArquivodadossistema(nomeArquivo, Dados);
                 JOptionPane.showMessageDialog(null, "As senhas não conferem");
             }
 
         }
 
         if ("limpar".equals(e.getActionCommand())) {
+            Dados = getDateTime() + " Lipou os campos do cadastro de Funcionário";
+            dados.gravarArquivodadossistema(nomeArquivo, Dados);
             cadastroFuncionario.limpar();
         }
     }

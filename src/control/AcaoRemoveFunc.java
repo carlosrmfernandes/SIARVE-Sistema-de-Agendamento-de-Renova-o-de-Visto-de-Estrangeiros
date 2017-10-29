@@ -10,20 +10,32 @@ import modelo.ModelChecarFunc;
 import visao.ChecarFunc;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author CarlosFernandes
  */
-public class AcaoChecarFunc implements ActionListener {
+public class AcaoRemoveFunc implements ActionListener {
 
     private String email;
     private ChecarFunc checarfunc;
     private ModelChecarFunc modelchecarFunc;
+    private DadosdoSistemas dados = new DadosdoSistemas();
+    private String Dados = null;
+    private String nomeArquivo = "Dados_do_Sistema.txt";
 
-    public AcaoChecarFunc(ChecarFunc checarfunc) {
+    public AcaoRemoveFunc(ChecarFunc checarfunc) {
         this.checarfunc = checarfunc;
+    }
+
+    private String getDateTime() {
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        return dateFormat.format(date);
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -31,11 +43,13 @@ public class AcaoChecarFunc implements ActionListener {
         if ("apagar".equals(e.getActionCommand())) {
             try {
                 modelchecarFunc = checarfunc.getModelChecarFunc();
+                email = modelchecarFunc.getEmail();
             } catch (Excesao ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
                 return;
             }
-            
+            Dados = getDateTime() + " Apagou Funcionário com o email "+email;
+            dados.gravarArquivodadossistema(nomeArquivo, Dados);
             JOptionPane.showMessageDialog(null, " Não foi implementado essa função ");
         }
     }

@@ -13,9 +13,24 @@ import java.util.Date;
  */
 public class ModelCadastroEstrangeiro {
 
-    private String NumPassaporte, nome, endereco, email, estadocivil, funcao, localfuncao, estado, sexo;
+    private String NumPassaporte, nome, endereco, email, estadocivil, funcao, localfuncao, estado, sexo, numCelular, cpf;
     private Date data;
-    private int numCelular, cpf;
+
+    public String getNumCelular() {
+        return numCelular;
+    }
+
+    public void setNumCelular(String numCelular) {
+        this.numCelular = numCelular;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
 
     public String getEmail() {
         return email;
@@ -73,14 +88,6 @@ public class ModelCadastroEstrangeiro {
         this.data = data;
     }
 
-    public int getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(int cpf) {
-        this.cpf = cpf;
-    }
-
     public String getNumPassaporte() {
         return NumPassaporte;
     }
@@ -95,14 +102,6 @@ public class ModelCadastroEstrangeiro {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public int getNumCelular() {
-        return numCelular;
-    }
-
-    public void setNumCelular(int numCelular) {
-        this.numCelular = numCelular;
     }
 
     public String getEndereco() {

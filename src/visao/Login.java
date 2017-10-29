@@ -6,32 +6,75 @@
 package visao;
 
 import control.AcaoLogin;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import javax.swing.JOptionPane;
 import modelo.ModelLogin;
 
 /**
  *
- * @author aristoteleslopes
+ * @author CarlosFernandes
  */
 public class Login extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
      */
-   private AcaoLogin l = new AcaoLogin(this);
-    
-    public  ModelLogin getLogin(){
-     ModelLogin modellogin = new ModelLogin();
-     modellogin.setUser(jtfuser.getText());
-     modellogin.setPassword(jpassword.getText());
-     return modellogin;
+    private AcaoLogin l = new AcaoLogin(this);
+
+    private String lerArquivo(String nomeArquivo) {
+
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+        try {
+            fileReader = new FileReader(nomeArquivo);
+            bufferedReader = new BufferedReader(fileReader);
+            StringBuilder sb = new StringBuilder();
+            while (bufferedReader.ready()) {
+
+                StringBuilder a = sb.append(bufferedReader.readLine());
+                jtfuser.setText(a.toString());
+                sb.append("\n");
+            }
+            return sb.toString();
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao abrir o arquivo: " + ex.getMessage());
+        } finally {
+            if (bufferedReader != null) {
+                try {
+                    bufferedReader.close();
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(null, "Erro ao abrir o arquivo: " + ex.getMessage());
+                }
+            }
+            if (fileReader != null) {
+                try {
+                    fileReader.close();
+                } catch (IOException ex) {
+
+                    JOptionPane.showMessageDialog(null, "Erro ao abrir o arquivo: " + ex.getMessage());
+                }
+
+            }
+        }
+        return null;
     }
-    
+
+    public ModelLogin getLogin() {
+        
+        ModelLogin modellogin = new ModelLogin();
+        modellogin.setUser(jtfuser.getText());
+        modellogin.setPassword(jpassword.getText());
+        return modellogin;
+    }
+
     public Login() {
         initComponents();
         setTitle("SIARVE");
         setLocationRelativeTo(this);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        
+        lerArquivo(nomeArquivo);
     }
 
     /**
@@ -173,6 +216,7 @@ public class Login extends javax.swing.JFrame {
         });
     }
 
+    private final String nomeArquivo = "Ultimo_Login.txt";
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jbtlogin;
     private javax.swing.JLabel jlbangola;
@@ -183,4 +227,5 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField jpassword;
     private javax.swing.JTextField jtfuser;
     // End of variables declaration//GEN-END:variables
+
 }

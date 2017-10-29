@@ -5,7 +5,7 @@
  */
 package visao;
 
-import control.AcaoChecarFunc;
+import control.AcaoRemoveFunc;
 import exception.Excesao;
 import modelo.ModelChecarFunc;
 
@@ -18,7 +18,7 @@ public class ChecarFunc extends javax.swing.JInternalFrame {
     /**
      * Creates new form ChecarFunc
      */
-    private AcaoChecarFunc l = new AcaoChecarFunc(this);
+    private AcaoRemoveFunc l = new AcaoRemoveFunc(this);
 
     public ModelChecarFunc getModelChecarFunc() throws Excesao {
        

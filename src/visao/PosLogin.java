@@ -10,7 +10,7 @@ import javax.swing.JDesktopPane;
 
 /**
  *
- * @author aristoteleslopes
+ * @author CarlosFernandes
  */
 public class PosLogin extends javax.swing.JFrame {
 
@@ -119,7 +119,7 @@ public class PosLogin extends javax.swing.JFrame {
 
         jMenuItemchecarFunc.setText("Remover Funcionário");
         jMenuItemchecarFunc.addActionListener(l);
-        jMenuItemchecarFunc.setActionCommand("checarfunc");
+        jMenuItemchecarFunc.setActionCommand("removerfunc");
         jMenuItemchecarFunc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemchecarFuncActionPerformed(evt);

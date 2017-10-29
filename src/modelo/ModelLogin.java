@@ -7,7 +7,8 @@ package modelo;
 
 /**
  *
- * @author aristoteleslopes
+ * @author CarlosFernandes
+
  */
 public class ModelLogin {
 

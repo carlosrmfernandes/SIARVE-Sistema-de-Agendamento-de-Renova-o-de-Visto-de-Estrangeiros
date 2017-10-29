@@ -8,6 +8,9 @@ package control;
 import visao.Developer;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -15,14 +18,25 @@ import java.awt.event.ActionListener;
  */
 public class AcaoDeveloper implements ActionListener {
 
-   private Developer developer;
+    private Developer developer;
+    private DadosdoSistemas dados = new DadosdoSistemas();
+    private String Dados = null;
+    private String nomeArquivo = "Dados_do_Sistema.txt";
 
     public AcaoDeveloper(Developer developer) {
         this.developer = developer;
     }
 
+    private String getDateTime() {
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        Date date = new Date();
+        return dateFormat.format(date);
+    }
+
     public void actionPerformed(ActionEvent e) {
         if ("sair".equals(e.getActionCommand())) {
+            Dados = getDateTime() + " Visualizou quem foram Os Desenvolvedores do sistema";
+            dados.gravarArquivodadossistema(nomeArquivo, Dados);
             developer.dispose();
         }
 

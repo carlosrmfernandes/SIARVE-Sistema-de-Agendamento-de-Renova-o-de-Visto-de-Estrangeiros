@@ -6,6 +6,7 @@
 package visao;
 
 import control.AcaoCadastroEstrangeiro;
+import exception.Excesao;
 import modelo.ModelCadastroEstrangeiro;
 
 /**
@@ -19,14 +20,51 @@ public class CadastroEstrangeiro extends javax.swing.JInternalFrame {
      */
     private AcaoCadastroEstrangeiro l = new AcaoCadastroEstrangeiro(this);
 
-    public ModelCadastroEstrangeiro modelcdastroestrang() {
+    public ModelCadastroEstrangeiro modelcdastroestrang() throws Excesao {
+
+        if ("".equals(jtfemail.getText())) {
+            throw new Excesao(" Deve preencher o email ");
+
+        }
+        if ("".equals(jtfEdereco.getText())) {
+            throw new Excesao(" Deve preencher o endereço ");
+
+        }
+        if ("".equals(jtfNmcelular.getText())) {
+            throw new Excesao(" Deve preencher o Numeru do celular ");
+
+        }
+        if ("".equals(jtfcpf.getText())) {
+            throw new Excesao(" Deve preencher o CPF ");
+
+        }
+        if ("".equals(jtfNumPassaport.getText())) {
+            throw new Excesao(" Deve preencher numero do passaporte ");
+
+        }
+        if (jdata.getDate() == null) {
+            throw new Excesao(" Deve preencher a Data de cadastro ");
+
+        }
+        if ("".equals(jtflocalfuncao.getText())) {
+            throw new Excesao(" Deve preencher o local da função ");
+
+        }
+        if ("".equals(jtfNomeCompleto.getText())) {
+            throw new Excesao(" Deve preencher o nome completo ");
+
+        }
+        if ("".equals(jtfestado.getText())) {
+            throw new Excesao(" Deve preencher o nome completo ");
+
+        }
         ModelCadastroEstrangeiro modelcadastroest = new ModelCadastroEstrangeiro();
 
         modelcadastroest.setNome(jtfNomeCompleto.getText());
         modelcadastroest.setEndereco(jtfEdereco.getText());
-        modelcadastroest.setNumCelular(Integer.parseInt(jtfNmcelular.getText()));
+        modelcadastroest.setNumCelular(jtfNmcelular.getText());
         modelcadastroest.setNumPassaporte(jtfNumPassaport.getText());
-        modelcadastroest.setCpf(Integer.parseInt(jtfcpf.getText()));
+        modelcadastroest.setCpf(jtfcpf.getText());
         modelcadastroest.setData(jdata.getDate());
         modelcadastroest.setEmail(jtfemail.getText());
         modelcadastroest.setEstado(jtfestado.getText());
@@ -39,10 +77,17 @@ public class CadastroEstrangeiro extends javax.swing.JInternalFrame {
     }
 
     public void limpar() {
+
         jtfNomeCompleto.setText("");
         jtfEdereco.setText("");
         jtfNmcelular.setText("");
         jtfNumPassaport.setText("");
+        jtfcpf.setText("");
+        jdata.setDate(null);
+        jtfemail.setText("");
+        jtflocalfuncao.setText("");
+        jtfestado.setText("");
+
     }
 
     public CadastroEstrangeiro() {
@@ -65,6 +110,13 @@ public class CadastroEstrangeiro extends javax.swing.JInternalFrame {
         jtfNumPassaport = new javax.swing.JTextField();
         jtfNomeCompleto = new javax.swing.JTextField();
         jtfNmcelular = new javax.swing.JTextField();
+        try{
+            javax.swing.text.MaskFormatter formataIntervalo = new javax.swing.text.MaskFormatter("(##)#########");
+            jtfNmcelular = new javax.swing.JFormattedTextField(formataIntervalo);
+        }catch(Exception e){
+
+        }
+
         jtfEdereco = new javax.swing.JTextField();
         jbtSalvar = new javax.swing.JButton();
         jbtlimpar = new javax.swing.JButton();
@@ -80,6 +132,13 @@ public class CadastroEstrangeiro extends javax.swing.JInternalFrame {
         jcbestadocivil = new javax.swing.JComboBox<>();
         jlbcpf = new javax.swing.JLabel();
         jtfcpf = new javax.swing.JTextField();
+        try{
+            javax.swing.text.MaskFormatter formataIntervalo = new javax.swing.text.MaskFormatter("###.###.###-##");
+            jtfcpf = new javax.swing.JFormattedTextField(formataIntervalo);
+        }catch(Exception e){
+
+        }
+
         jlbestado = new javax.swing.JLabel();
         jtfestado = new javax.swing.JTextField();
         jlbsexo = new javax.swing.JLabel();
@@ -211,11 +270,12 @@ public class CadastroEstrangeiro extends javax.swing.JInternalFrame {
                         .addComponent(jlbdata))
                     .addComponent(jdata, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jcbfuncao, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlbfuncao)
-                    .addComponent(jlbestadocivil)
-                    .addComponent(jcbestadocivil, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jcbestadocivil, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jcbfuncao, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlbfuncao)
+                        .addComponent(jlbestadocivil)))
                 .addGap(7, 7, 7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtflocalfuncao, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)

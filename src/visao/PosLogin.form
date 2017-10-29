@@ -77,7 +77,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemchecarFuncActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jMenuItemchecarFunc.addActionListener(l);&#xa;jMenuItemchecarFunc.setActionCommand(&quot;checarfunc&quot;);"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jMenuItemchecarFunc.addActionListener(l);&#xa;jMenuItemchecarFunc.setActionCommand(&quot;removerfunc&quot;);"/>
               </AuxValues>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemchecarAgendamento">
