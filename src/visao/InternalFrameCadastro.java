@@ -7,6 +7,7 @@ package visao;
 
 import control.AcaoInternalFrameCadastro;
 import exception.Excesao;
+import java.awt.event.KeyEvent;
 import modelo.ModelInternalFrameCadastro;
 
 /**
@@ -309,11 +310,11 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
 
     private void jtfcodigosolicitacaoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfcodigosolicitacaoKeyTyped
         // TODO add your handling code here:
-        int codigosolicitacao = evt.getKeyChar();
-        int a;
-        a = jtfcodigosolicitacao.getText().length();
+        char codigosolicitacao = evt.getKeyChar();
 
-        if (!(codigosolicitacao >= 48 && codigosolicitacao <= 57)) {
+        if (!(Character.isDigit(codigosolicitacao))
+                || (codigosolicitacao == KeyEvent.VK_BACK_SPACE)
+                || (codigosolicitacao == KeyEvent.VK_DELETE)) {
             evt.consume();
         }
     }//GEN-LAST:event_jtfcodigosolicitacaoKeyTyped
