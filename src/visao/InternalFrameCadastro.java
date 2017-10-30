@@ -40,9 +40,8 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
 
         }
 
-        if (jtfcelular.getText() == null) {
+        if (jtfcelular.getText().trim().isEmpty()) {
             throw new Excesao("Deve preencher a o celular");
-
         }
 
         ModelInternalFrameCadastro modelcadastro = new ModelInternalFrameCadastro();
@@ -311,9 +310,11 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
     private void jtfcodigosolicitacaoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfcodigosolicitacaoKeyTyped
         // TODO add your handling code here:
         int codigosolicitacao = evt.getKeyChar();
+        int a;
+        a = jtfcodigosolicitacao.getText().length();
+
         if (!(codigosolicitacao >= 48 && codigosolicitacao <= 57)) {
             evt.consume();
-
         }
     }//GEN-LAST:event_jtfcodigosolicitacaoKeyTyped
 
