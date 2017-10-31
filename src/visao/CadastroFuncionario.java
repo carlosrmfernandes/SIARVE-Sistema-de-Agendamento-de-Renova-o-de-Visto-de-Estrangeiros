@@ -34,10 +34,7 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
             throw new Excesao(" Deve preencher o senha ");
 
         }
-        if ("".equals(jtfcpf.getText())) {
-            throw new Excesao(" Deve preencher o CPF ");
 
-        }
         if ("".equals(jPasswordConfSenha.getText())) {
             throw new Excesao(" Deve confirmar o senha ");
 
@@ -46,9 +43,12 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
             throw new Excesao(" Deve preencher a Data de cadastro ");
 
         }
-        if ("".equals(jtfcelular.getText())) {
-            throw new Excesao(" Deve preencher o celular ");
 
+        if (jtfcelular.getText().equals("(  )         ")) {
+            throw new Excesao("Deve preencher a o celular");
+        }
+        if (jtfcpf.getText().equals("   .   .   -  ")) {
+            throw new Excesao("Deve preencher a o CPF");
         }
         if ("".equals(jtfnome.getText())) {
             throw new Excesao(" Deve preencher o nome ");

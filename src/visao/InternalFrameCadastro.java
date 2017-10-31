@@ -41,7 +41,7 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
 
         }
 
-        if (jtfcelular.getText().trim().isEmpty()) {
+        if (jtfcelular.getText().equals("(  )         ")) {
             throw new Excesao("Deve preencher a o celular");
         }
 

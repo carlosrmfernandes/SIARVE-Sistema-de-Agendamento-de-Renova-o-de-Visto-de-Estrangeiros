@@ -55,8 +55,14 @@ public class CadastroEstrangeiro extends javax.swing.JInternalFrame {
 
         }
         if ("".equals(jtfestado.getText())) {
-            throw new Excesao(" Deve preencher o nome completo ");
+            throw new Excesao(" Deve preencher o nome Estado ");
 
+        }
+        if (jtfNmcelular.getText().equals("(  )         ")) {
+            throw new Excesao("Deve preencher a o celular");
+        }
+        if (jtfcpf.getText().equals("   .   .   -  ")) {
+            throw new Excesao("Deve preencher a o CPF");
         }
         ModelCadastroEstrangeiro modelcadastroest = new ModelCadastroEstrangeiro();
 
