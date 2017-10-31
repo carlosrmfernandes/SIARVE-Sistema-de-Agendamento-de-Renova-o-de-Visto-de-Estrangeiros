@@ -22,8 +22,9 @@ public class ChecarAgendamento extends javax.swing.JInternalFrame {
 
     public ModelChecarAgendamento modelchegaragendamento() throws Excesao {
 
-        if ("".equals(tfpesquisa.getText())) {
-            throw new Excesao("Deve preencher o Codigo de Solicitação");
+        if ("".equals(tfpesquisa.getText()) || tfpesquisa.getText().length() > 10) {
+            throw new Excesao("Verifica se o campo  de codigo de solicitação não esta vazio "
+                    + "\nou se codigo de solicitação foi digitado corretamente ");
 
         }
 

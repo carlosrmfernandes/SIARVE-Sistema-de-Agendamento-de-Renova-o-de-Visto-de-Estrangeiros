@@ -23,8 +23,9 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
 
     public ModelInternalFrameCadastro getModelInternalFrameCadastro() throws Excesao {
 
-        if ("".equals(jtfcodigosolicitacao.getText())) {
-            throw new Excesao("Deve preencher o Codigo de Solicitação");
+        if ("".equals(jtfcodigosolicitacao.getText()) || jtfcodigosolicitacao.getText().length() > 10) {
+            throw new Excesao("Verifica se o campo  de codigo de solicitação não esta vazio "
+                    + "\nou se codigo de solicitação foi digitado corretamente ");
 
         }
         if ("".equals(jTextAreaDescricao.getText())) {
