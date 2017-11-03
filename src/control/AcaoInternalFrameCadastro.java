@@ -67,13 +67,14 @@ public class AcaoInternalFrameCadastro implements ActionListener {
             SimpleDateFormat deteformat = new SimpleDateFormat("dd/MM/yyyy");
             String dataformatada = deteformat.format(data);
 
-            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Agendou a Renovação do visto com o Codigo de codigosolicitacao " + codigosolicitacao;
-            dados.gravarArquivodadossistema(nomeArquivo, Dados);
-
             if (!email.matches(emailv)) {
 
                 JOptionPane.showMessageDialog(null, "Verifica o email esta incorreto");
+
             } else {
+                Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Agendou a Renovação do visto com o Codigo de codigosolicitacao " + codigosolicitacao;
+                dados.gravarArquivodadossistema(nomeArquivo, Dados);
+
                 System.out.println("Codigo de Solicitão :" + codigosolicitacao + ""
                         + "\nDescrição :" + Descricao
                         + "\nData :" + dataformatada

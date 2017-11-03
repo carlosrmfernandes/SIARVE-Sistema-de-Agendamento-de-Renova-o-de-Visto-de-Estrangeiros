@@ -70,7 +70,7 @@ public class AcaoCadastroFuncionario implements ActionListener {
 
             if (senha.equals(confsenha)) {
                 if (email.matches(emailv)) {
-                    Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Foi Cadastrado No Sistema O Funcionário " + nome;
+                    Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Cadastrou No Sistema O Funcionário " + nome;
                     dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
                     System.out.println("Email :" + email + ""

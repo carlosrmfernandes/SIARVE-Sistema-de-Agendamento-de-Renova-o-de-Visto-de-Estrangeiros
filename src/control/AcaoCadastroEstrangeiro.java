@@ -66,14 +66,13 @@ public class AcaoCadastroEstrangeiro implements ActionListener {
             SimpleDateFormat deteformat = new SimpleDateFormat("dd/MM/yyyy");
             String dataformatada = deteformat.format(data);
 
-            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Foi Cadastrado No Sistema O Estrangeiro " + nome;
-            dados.gravarArquivodadossistema(nomeArquivo, Dados);
-
             if (!email.matches(emailv)) {
 
                 JOptionPane.showMessageDialog(null, "Verifica o email esta incorreto");
 
             } else {
+                Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Cadastrou No Sistema O Estrangeiro " + nome;
+                dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
                 System.out.println("Numero de Passaporte :" + NumPassaporte + ""
                         + "\nNome Completo :" + nome
