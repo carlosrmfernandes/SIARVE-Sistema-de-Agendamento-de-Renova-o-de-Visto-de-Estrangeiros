@@ -42,6 +42,7 @@ public class AcaoPosLogin implements ActionListener {
     private DadosdoSistemas dados = new DadosdoSistemas();
     private String Dados = null;
     private String nomeArquivo = "Dados_do_Sistema.txt";
+    private final String nomeArquivoLogin = "Ultimo_Login.txt";
 
     public AcaoPosLogin(PosLogin novo) {
         this.novo = novo;
@@ -60,7 +61,7 @@ public class AcaoPosLogin implements ActionListener {
                 obj = new InternalFrameCadastro();
                 novo.getjDesktopPane().add(obj);
                 obj.setVisible(true);
-                Dados = getDateTime() + " Entrou na Opção Arquivo Novo - Agendamento do visto";
+                Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Entrou na Opção Arquivo Novo - Agendamento do visto";
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
                 try {
                     obj.setSelected(true);
@@ -74,7 +75,7 @@ public class AcaoPosLogin implements ActionListener {
             int escolha = JOptionPane.showConfirmDialog(null, "Att: Certifique que não há agendamento em processamento"
                     + "\nDeseja encerrar o sistema ?");
             if (escolha == 0) {
-                Dados = getDateTime() +" Entrou na Opção Arquivo Sair - Encerrando o Sistema"
+                Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Entrou na Opção Arquivo Sair - Encerrando o Sistema"
                         + "\n========================================================================";
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
                 System.exit(0);
@@ -82,7 +83,7 @@ public class AcaoPosLogin implements ActionListener {
         }
         if ("sobre".equals(e.getActionCommand())) {
 
-            Dados = getDateTime() +" Entrou na Opção Sobre  - Sobre o Sistema";
+            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Entrou na Opção Sobre  - Sobre o Sistema";
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
             JOptionPane.showMessageDialog(null, "SIARVE -  É  um   sistema  de  agendamento "
@@ -94,7 +95,7 @@ public class AcaoPosLogin implements ActionListener {
         }
         if ("ajuda".equals(e.getActionCommand())) {
 
-            Dados = getDateTime() +" Entrou na Opção Ajuda  - Ajuda do Sistema";
+            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Entrou na Opção Ajuda  - Ajuda do Sistema";
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
             JOptionPane.showMessageDialog(null, "Entar em contacto com o suporte "
@@ -106,7 +107,7 @@ public class AcaoPosLogin implements ActionListener {
                 novo.getjDesktopPane().add(obj1);
                 obj1.setVisible(true);
 
-                Dados = getDateTime() +" Entrou na Opção Desenvolvedor  - Desenvolvedor do Sistema";
+                Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Entrou na Opção Desenvolvedor  - Desenvolvedor do Sistema";
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
                 try {
@@ -124,7 +125,7 @@ public class AcaoPosLogin implements ActionListener {
                 novo.getjDesktopPane().add(obj2);
                 obj2.setVisible(true);
 
-                Dados = getDateTime() +" Entrou na Opção Cadastro  - Cadastro do Funcionário";
+                Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Entrou na Opção Cadastro  - Cadastro do Funcionário";
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
                 try {
@@ -140,7 +141,7 @@ public class AcaoPosLogin implements ActionListener {
                 novo.getjDesktopPane().add(obj3);
                 obj3.setVisible(true);
 
-                Dados = getDateTime() +" Entrou na Opção Cadastro  - Cadastro do Estrangeiro";
+                Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Entrou na Opção Cadastro  - Cadastro do Estrangeiro";
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
                 try {
@@ -158,7 +159,7 @@ public class AcaoPosLogin implements ActionListener {
                 novo.getjDesktopPane().add(obj4);
                 obj4.setVisible(true);
 
-                Dados = getDateTime() +" Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário";
+                Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário";
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
                 try {
@@ -176,7 +177,7 @@ public class AcaoPosLogin implements ActionListener {
                 novo.getjDesktopPane().add(obj5);
                 obj5.setVisible(true);
 
-                Dados = getDateTime() +" Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro";
+                Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro";
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
                 try {
@@ -189,7 +190,7 @@ public class AcaoPosLogin implements ActionListener {
         }
         if ("checaragendamento".equals(e.getActionCommand())) {
 
-            Dados = getDateTime() +" Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento";
+            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento";
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
             if (obj6 == null || !obj6.isVisible()) {

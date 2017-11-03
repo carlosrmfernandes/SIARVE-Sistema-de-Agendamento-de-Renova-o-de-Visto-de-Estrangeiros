@@ -27,6 +27,7 @@ public class AcaoChecarAgendamento implements ActionListener {
     private DadosdoSistemas dados = new DadosdoSistemas();
     private String Dados = null;
     private String nomeArquivo = "Dados_do_Sistema.txt";
+    private final String nomeArquivoLogin = "Ultimo_Login.txt";
 
     public AcaoChecarAgendamento(ChecarAgendamento checaragendamento) {
         this.checaragendamento = checaragendamento;
@@ -49,7 +50,7 @@ public class AcaoChecarAgendamento implements ActionListener {
             }
             pesquisar = modelchecaragendamento.getCodigosolicitacao();
 
-            Dados = getDateTime() + " Pesquisou Pelo Angendamento que Contem o Código de Solicitão :" + pesquisar;
+            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Pesquisou Pelo Angendamento que Contem o Código de Solicitão :" + pesquisar;
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
             System.out.println("Codigo :" + pesquisar);
@@ -63,14 +64,14 @@ public class AcaoChecarAgendamento implements ActionListener {
                 return;
             }
             pesquisar = modelchecaragendamento.getCodigosolicitacao();
-            Dados = getDateTime() + " Apagpou o Angendamento que Contem o Código de Solicitão :" + pesquisar;
+            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Apagpou o Angendamento que Contem o Código de Solicitão :" + pesquisar;
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
             JOptionPane.showMessageDialog(null, " Não foi implementado essa função ");
 
         }
         if ("limpar".equals(e.getActionCommand())) {
             
-            Dados = getDateTime() + " Limpou o Campos da Pesquisa de Agendamento";
+            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Limpou o Campos da Pesquisa de Agendamento";
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
             checaragendamento.limpar();

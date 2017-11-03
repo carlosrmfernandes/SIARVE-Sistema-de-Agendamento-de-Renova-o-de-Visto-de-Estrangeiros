@@ -5,7 +5,9 @@
  */
 package control;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JOptionPane;
@@ -16,6 +18,7 @@ import javax.swing.JOptionPane;
  */
 public class DadosdoSistemas {
 
+   
     public void gravarArquivodadossistema(String nomeArquivo, String textoArquivo) {
 
         FileWriter fileWriter = null;
@@ -48,6 +51,44 @@ public class DadosdoSistemas {
 
             }
         }
+    }
+
+    public String lerArquivo(String nomeArquivoLogin) {
+        String nome;
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+        try {
+            fileReader = new FileReader(nomeArquivoLogin);
+            bufferedReader = new BufferedReader(fileReader);
+            StringBuilder sb = new StringBuilder();
+            while (bufferedReader.ready()) {
+
+                StringBuilder a = sb.append(bufferedReader.readLine());
+                nome = a.toString();
+                System.out.print(nome);
+            }
+            return sb.toString();
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao abrir o arquivo: " + ex.getMessage());
+        } finally {
+            if (bufferedReader != null) {
+                try {
+                    bufferedReader.close();
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(null, "Erro ao abrir o arquivo: " + ex.getMessage());
+                }
+            }
+            if (fileReader != null) {
+                try {
+                    fileReader.close();
+                } catch (IOException ex) {
+
+                    JOptionPane.showMessageDialog(null, "Erro ao abrir o arquivo: " + ex.getMessage());
+                }
+
+            }
+        }
+        return null;
     }
 
 }

@@ -28,6 +28,7 @@ public class AcaoCadastroEstrangeiro implements ActionListener {
     private DadosdoSistemas dados = new DadosdoSistemas();
     private String Dados = null;
     private String nomeArquivo = "Dados_do_Sistema.txt";
+    private final String nomeArquivoLogin = "Ultimo_Login.txt";
     private String emailv = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
 
     public AcaoCadastroEstrangeiro(CadastroEstrangeiro cadastroestrangeiro) {
@@ -65,7 +66,7 @@ public class AcaoCadastroEstrangeiro implements ActionListener {
             SimpleDateFormat deteformat = new SimpleDateFormat("dd/MM/yyyy");
             String dataformatada = deteformat.format(data);
 
-            Dados = getDateTime() + " Foi Cadastrado No Sistema O Estrangeiro " + nome;
+            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Foi Cadastrado No Sistema O Estrangeiro " + nome;
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
             if (!email.matches(emailv)) {
@@ -91,7 +92,7 @@ public class AcaoCadastroEstrangeiro implements ActionListener {
         }
 
         if ("limpar".equals(e.getActionCommand())) {
-            Dados = getDateTime() + " Lipou os campos do cadastro de Estrangeiro";
+            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Lipou os campos do cadastro de Estrangeiro";
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
             cadastroestrangeiro.limpar();
 

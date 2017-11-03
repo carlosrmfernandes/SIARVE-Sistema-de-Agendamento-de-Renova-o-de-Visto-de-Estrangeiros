@@ -89,7 +89,7 @@ public class AcaoLogin implements ActionListener {
         new PosLogin().setVisible(true);
         String nomeArquivo = "Ultimo_Login.txt";
         gravarArquivoUltimoLogin(nomeArquivo, user);
-        Dados = getDateTime() + "  " + user + " Logou No Sistema ";
+        Dados = getDateTime() + " Usuário " + user + " Logou No Sistema ";
         dados.gravarArquivodadossistema(nomeArquivodadossistema, Dados);
 
     }

@@ -28,6 +28,7 @@ public class AcaoCadastroFuncionario implements ActionListener {
     private DadosdoSistemas dados = new DadosdoSistemas();
     private String Dados = null;
     private String nomeArquivo = "Dados_do_Sistema.txt";
+    private final String nomeArquivoLogin = "Ultimo_Login.txt";
     private String emailv = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
 
     public AcaoCadastroFuncionario(CadastroFuncionario cadastroFuncionario) {
@@ -69,7 +70,7 @@ public class AcaoCadastroFuncionario implements ActionListener {
 
             if (senha.equals(confsenha)) {
                 if (email.matches(emailv)) {
-                    Dados = getDateTime() + " Foi Cadastrado No Sistema O Funcionário " + nome;
+                    Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Foi Cadastrado No Sistema O Funcionário " + nome;
                     dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
                     System.out.println("Email :" + email + ""
@@ -87,7 +88,7 @@ public class AcaoCadastroFuncionario implements ActionListener {
                     JOptionPane.showMessageDialog(null, "Verifica o email esta incorreto");
                 }
             } else {
-                Dados = getDateTime() + " Erro No Cadastrado do Funcionário Porque as senhas São Diferentes ";
+                Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Erro No Cadastrado do Funcionário Porque as senhas São Diferentes ";
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
                 JOptionPane.showMessageDialog(null, "As senhas não conferem");
             }
@@ -95,7 +96,7 @@ public class AcaoCadastroFuncionario implements ActionListener {
         }
 
         if ("limpar".equals(e.getActionCommand())) {
-            Dados = getDateTime() + " Lipou os campos do cadastro de Funcionário";
+            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Lipou os campos do cadastro de Funcionário";
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
             cadastroFuncionario.limpar();
         }

@@ -27,6 +27,7 @@ public class AcaoRemoveFunc implements ActionListener {
     private DadosdoSistemas dados = new DadosdoSistemas();
     private String Dados = null;
     private String nomeArquivo = "Dados_do_Sistema.txt";
+    private final String nomeArquivoLogin = "Ultimo_Login.txt";
     private String emailv = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
 
     public AcaoRemoveFunc(ChecarFunc checarfunc) {
@@ -54,7 +55,7 @@ public class AcaoRemoveFunc implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Verifica o email esta incorreto");
 
             } else {
-                Dados = getDateTime() + " Apagou Funcionário com o email " + email;
+                Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Apagou Funcionário com o email " + email;
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
                 JOptionPane.showMessageDialog(null, " Não foi implementado essa função ");
             }

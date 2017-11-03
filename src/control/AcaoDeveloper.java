@@ -22,6 +22,7 @@ public class AcaoDeveloper implements ActionListener {
     private DadosdoSistemas dados = new DadosdoSistemas();
     private String Dados = null;
     private String nomeArquivo = "Dados_do_Sistema.txt";
+    private final String nomeArquivoLogin = "Ultimo_Login.txt";
 
     public AcaoDeveloper(Developer developer) {
         this.developer = developer;
@@ -35,7 +36,7 @@ public class AcaoDeveloper implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if ("sair".equals(e.getActionCommand())) {
-            Dados = getDateTime() + " Visualizou quem foram Os Desenvolvedores do sistema";
+            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Visualizou quem foram Os Desenvolvedores do sistema";
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
             developer.dispose();
         }

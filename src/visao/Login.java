@@ -22,7 +22,6 @@ public class Login extends javax.swing.JFrame {
      * Creates new form Login
      */
     private AcaoLogin l = new AcaoLogin(this);
-
     private String lerArquivo(String nomeArquivo) {
 
         FileReader fileReader = null;

@@ -14,7 +14,6 @@ import java.awt.event.ActionListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import static java.util.regex.Pattern.CASE_INSENSITIVE;
 import javax.swing.JOptionPane;
 
 /**
@@ -32,6 +31,8 @@ public class AcaoInternalFrameCadastro implements ActionListener {
     private DadosdoSistemas dados = new DadosdoSistemas();
     private String Dados = null;
     private String nomeArquivo = "Dados_do_Sistema.txt";
+    private final String nomeArquivoLogin = "Ultimo_Login.txt";
+
     private String emailv = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
 
     public AcaoInternalFrameCadastro(InternalFrameCadastro cadastro) {
@@ -66,7 +67,7 @@ public class AcaoInternalFrameCadastro implements ActionListener {
             SimpleDateFormat deteformat = new SimpleDateFormat("dd/MM/yyyy");
             String dataformatada = deteformat.format(data);
 
-            Dados = getDateTime() + " Agendou a Renovação do visto com o Codigo de codigosolicitacao " + codigosolicitacao;
+            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Agendou a Renovação do visto com o Codigo de codigosolicitacao " + codigosolicitacao;
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
             if (!email.matches(emailv)) {
@@ -86,7 +87,7 @@ public class AcaoInternalFrameCadastro implements ActionListener {
         }
         if ("limpar".equals(e.getActionCommand())) {
 
-            Dados = getDateTime() + " Limpou os Campos de Agendamento";
+            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Limpou os Campos de Agendamento";
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
             cadastro.limpar();
@@ -96,7 +97,7 @@ public class AcaoInternalFrameCadastro implements ActionListener {
             int escolha = JOptionPane.showConfirmDialog(null, "Um novo agendamento será iniciado "
                     + "\nDeseja continuar ?");
             if (escolha == 0) {
-                Dados = getDateTime() + " Começou um Novo Agendamento";
+                Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Começou um Novo Agendamento";
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
                 cadastro.limpar();
 
