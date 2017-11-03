@@ -28,6 +28,7 @@ public class AcaoCadastroFuncionario implements ActionListener {
     private DadosdoSistemas dados = new DadosdoSistemas();
     private String Dados = null;
     private String nomeArquivo = "Dados_do_Sistema.txt";
+    private String emailv = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
 
     public AcaoCadastroFuncionario(CadastroFuncionario cadastroFuncionario) {
         this.cadastroFuncionario = cadastroFuncionario;
@@ -67,21 +68,24 @@ public class AcaoCadastroFuncionario implements ActionListener {
             String dataformatada = deteformat.format(data);
 
             if (senha.equals(confsenha)) {
+                if (email.matches(emailv)) {
+                    Dados = getDateTime() + " Foi Cadastrado No Sistema O Funcionário " + nome;
+                    dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
-                Dados = getDateTime() + " Foi Cadastrado No Sistema O Funcionário " + nome;
-                dados.gravarArquivodadossistema(nomeArquivo, Dados);
-
-                System.out.println("Email :" + email + ""
-                        + "\nSenha :" + senha + ""
-                        + "\nEdereco : " + endereco + ""
-                        + "\nTipo de Pessoa : " + tipopessoa + ""
-                        + "\nEstado : " + estado + ""
-                        + "\nSexo : " + sexo + ""
-                        + "\nNome : " + nome + ""
-                        + "\nEstado Civil : " + estadociveil + ""
-                        + "\nData de Registro :" + dataformatada + ""
-                        + "\nCelular : " + celular + ""
-                        + "\nCPF :" + cpf);
+                    System.out.println("Email :" + email + ""
+                            + "\nSenha :" + senha + ""
+                            + "\nEdereco : " + endereco + ""
+                            + "\nTipo de Pessoa : " + tipopessoa + ""
+                            + "\nEstado : " + estado + ""
+                            + "\nSexo : " + sexo + ""
+                            + "\nNome : " + nome + ""
+                            + "\nEstado Civil : " + estadociveil + ""
+                            + "\nData de Registro :" + dataformatada + ""
+                            + "\nCelular : " + celular + ""
+                            + "\nCPF :" + cpf);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Verifica o email esta incorreto");
+                }
             } else {
                 Dados = getDateTime() + " Erro No Cadastrado do Funcionário Porque as senhas São Diferentes ";
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);

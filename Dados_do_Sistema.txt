@@ -1,0 +1,89 @@
+02/11/2017 15:11:29  carlos Logou No Sistema 
+02/11/2017 15:11:32 Entrou na Opção Arquivo Novo - Agendamento do visto
+02/11/2017 15:12:19 Agendou a Renovação do visto com o Codigo de codigosolicitacao 123445
+02/11/2017 15:12:21 Limpou os Campos de Agendamento
+02/11/2017 15:12:29 Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+02/11/2017 15:12:45 Entrou na Opção Cadastro  - Cadastro do Estrangeiro
+02/11/2017 15:13:13 Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+02/11/2017 15:13:30 Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+02/11/2017 15:13:55 Entrou na Opção Arquivo Sair - Encerrando o Sistema
+========================================================================
+03/11/2017 14:18:03  carlos Logou No Sistema 
+03/11/2017 14:18:13 Entrou na Opção Arquivo Novo - Agendamento do visto
+03/11/2017 14:18:40 Entrou na Opção Cadastro  - Cadastro do Funcionário
+03/11/2017 14:18:45 Entrou na Opção Cadastro  - Cadastro do Estrangeiro
+03/11/2017 14:18:50 Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+03/11/2017 14:25:21  carlos Logou No Sistema 
+03/11/2017 14:25:25 Entrou na Opção Arquivo Novo - Agendamento do visto
+03/11/2017 14:25:45 Agendou a Renovação do visto com o Codigo de codigosolicitacao 1234
+03/11/2017 14:25:57 Agendou a Renovação do visto com o Codigo de codigosolicitacao 1234
+03/11/2017 14:27:17  carlos Logou No Sistema 
+03/11/2017 14:27:21 Entrou na Opção Arquivo Novo - Agendamento do visto
+03/11/2017 14:27:37 Agendou a Renovação do visto com o Codigo de codigosolicitacao 12345
+03/11/2017 14:32:01  carlos Logou No Sistema 
+03/11/2017 14:32:38 Entrou na Opção Arquivo Novo - Agendamento do visto
+03/11/2017 14:32:53 Agendou a Renovação do visto com o Codigo de codigosolicitacao 12342
+03/11/2017 14:34:11 Entrou na Opção Arquivo Sair - Encerrando o Sistema
+========================================================================
+03/11/2017 14:39:20  carlos Logou No Sistema 
+03/11/2017 14:39:24 Entrou na Opção Arquivo Novo - Agendamento do visto
+03/11/2017 14:39:37 Agendou a Renovação do visto com o Codigo de codigosolicitacao 128
+03/11/2017 14:40:45  carlos Logou No Sistema 
+03/11/2017 14:40:49 Entrou na Opção Arquivo Novo - Agendamento do visto
+03/11/2017 14:41:05 Agendou a Renovação do visto com o Codigo de codigosolicitacao 834
+03/11/2017 14:41:43  carlos Logou No Sistema 
+03/11/2017 14:41:47 Entrou na Opção Arquivo Novo - Agendamento do visto
+03/11/2017 14:41:59 Agendou a Renovação do visto com o Codigo de codigosolicitacao 3782
+03/11/2017 14:42:11 Agendou a Renovação do visto com o Codigo de codigosolicitacao 3782
+03/11/2017 14:44:57  carlos Logou No Sistema 
+03/11/2017 14:45:01 Entrou na Opção Arquivo Novo - Agendamento do visto
+03/11/2017 14:45:20 Agendou a Renovação do visto com o Codigo de codigosolicitacao 2738783
+03/11/2017 14:45:30 Agendou a Renovação do visto com o Codigo de codigosolicitacao 2738783
+03/11/2017 14:45:36 Agendou a Renovação do visto com o Codigo de codigosolicitacao 2738783
+03/11/2017 14:45:53 Agendou a Renovação do visto com o Codigo de codigosolicitacao 2738783
+03/11/2017 14:48:08  carlos Logou No Sistema 
+03/11/2017 14:48:11 Entrou na Opção Arquivo Novo - Agendamento do visto
+03/11/2017 14:48:34 Agendou a Renovação do visto com o Codigo de codigosolicitacao 21723
+03/11/2017 14:48:41 Agendou a Renovação do visto com o Codigo de codigosolicitacao 21723
+03/11/2017 14:48:46 Agendou a Renovação do visto com o Codigo de codigosolicitacao 21723
+03/11/2017 14:48:58 Agendou a Renovação do visto com o Codigo de codigosolicitacao 21723
+03/11/2017 14:49:15 Agendou a Renovação do visto com o Codigo de codigosolicitacao 21723
+03/11/2017 14:49:21 Agendou a Renovação do visto com o Codigo de codigosolicitacao 21723
+03/11/2017 14:49:28 Limpou os Campos de Agendamento
+03/11/2017 15:01:25  carlos Logou No Sistema 
+03/11/2017 15:01:29 Entrou na Opção Cadastro  - Cadastro do Funcionário
+03/11/2017 15:02:06 Foi Cadastrado No Sistema O Funcionário carlos
+03/11/2017 15:03:27  carlos Logou No Sistema 
+03/11/2017 15:03:31 Entrou na Opção Cadastro  - Cadastro do Funcionário
+03/11/2017 15:04:00 Foi Cadastrado No Sistema O Funcionário carlos
+03/11/2017 15:05:50  carlos Logou No Sistema 
+03/11/2017 15:05:57 Entrou na Opção Cadastro  - Cadastro do Funcionário
+03/11/2017 15:06:22 Foi Cadastrado No Sistema O Funcionário car
+03/11/2017 15:06:57  carlos Logou No Sistema 
+03/11/2017 15:07:00 Entrou na Opção Cadastro  - Cadastro do Funcionário
+03/11/2017 15:07:21 Erro No Cadastrado do Funcionário Porque as senhas São Diferentes 
+03/11/2017 15:07:28 Erro No Cadastrado do Funcionário Porque as senhas São Diferentes 
+03/11/2017 15:07:45 Foi Cadastrado No Sistema O Funcionário carlos
+03/11/2017 15:09:15  carlos Logou No Sistema 
+03/11/2017 15:09:21 Entrou na Opção Cadastro  - Cadastro do Funcionário
+03/11/2017 15:12:50 Erro No Cadastrado do Funcionário Porque as senhas São Diferentes 
+03/11/2017 15:12:55 Foi Cadastrado No Sistema O Funcionário ca
+03/11/2017 15:13:06 Entrou na Opção Arquivo Novo - Agendamento do visto
+03/11/2017 15:13:12 Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+03/11/2017 15:13:15 Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+03/11/2017 15:13:20 Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+03/11/2017 15:15:11 Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+03/11/2017 15:27:21  carlos Logou No Sistema 
+03/11/2017 15:27:28 Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+03/11/2017 15:27:43 Apagou Funcionário com o email car@unesc.net
+03/11/2017 15:28:46  carlos Logou No Sistema 
+03/11/2017 15:28:53 Entrou na Opção Arquivo Novo - Agendamento do visto
+03/11/2017 15:29:40  carlos Logou No Sistema 
+03/11/2017 15:29:45 Entrou na Opção Arquivo Novo - Agendamento do visto
+03/11/2017 15:30:31  carlos Logou No Sistema 
+03/11/2017 15:30:37 Entrou na Opção Arquivo Novo - Agendamento do visto
+03/11/2017 15:31:12  carlos Logou No Sistema 
+03/11/2017 15:31:39  carlos Logou No Sistema 
+03/11/2017 15:32:00  carlos Logou No Sistema 
+03/11/2017 15:32:03 Entrou na Opção Arquivo Novo - Agendamento do visto
+03/11/2017 15:32:17 Entrou na Opção Cadastro  - Cadastro do Funcionário

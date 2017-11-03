@@ -14,6 +14,7 @@ import java.awt.event.ActionListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import static java.util.regex.Pattern.CASE_INSENSITIVE;
 import javax.swing.JOptionPane;
 
 /**
@@ -31,6 +32,7 @@ public class AcaoInternalFrameCadastro implements ActionListener {
     private DadosdoSistemas dados = new DadosdoSistemas();
     private String Dados = null;
     private String nomeArquivo = "Dados_do_Sistema.txt";
+    private String emailv = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
 
     public AcaoInternalFrameCadastro(InternalFrameCadastro cadastro) {
         this.cadastro = cadastro;
@@ -67,14 +69,19 @@ public class AcaoInternalFrameCadastro implements ActionListener {
             Dados = getDateTime() + " Agendou a Renovação do visto com o Codigo de codigosolicitacao " + codigosolicitacao;
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
-            System.out.println("Codigo de Solicitão :" + codigosolicitacao + ""
-                    + "\nDescrição :" + Descricao
-                    + "\nData :" + dataformatada
-                    + "\nHorário :" + horario + ""
-                    + "\nTipo :" + tipo + ""
-                    + "\nSexo :" + sexo + ""
-                    + "\nEmail :" + email + ""
-                    + "\nCelualr : " + celular);
+            if (!email.matches(emailv)) {
+
+                JOptionPane.showMessageDialog(null, "Verifica o email esta incorreto");
+            } else {
+                System.out.println("Codigo de Solicitão :" + codigosolicitacao + ""
+                        + "\nDescrição :" + Descricao
+                        + "\nData :" + dataformatada
+                        + "\nHorário :" + horario + ""
+                        + "\nTipo :" + tipo + ""
+                        + "\nSexo :" + sexo + ""
+                        + "\nEmail :" + email + ""
+                        + "\nCelualr : " + celular);
+            }
 
         }
         if ("limpar".equals(e.getActionCommand())) {

@@ -28,6 +28,7 @@ public class AcaoCadastroEstrangeiro implements ActionListener {
     private DadosdoSistemas dados = new DadosdoSistemas();
     private String Dados = null;
     private String nomeArquivo = "Dados_do_Sistema.txt";
+    private String emailv = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
 
     public AcaoCadastroEstrangeiro(CadastroEstrangeiro cadastroestrangeiro) {
         this.cadastroestrangeiro = cadastroestrangeiro;
@@ -67,18 +68,25 @@ public class AcaoCadastroEstrangeiro implements ActionListener {
             Dados = getDateTime() + " Foi Cadastrado No Sistema O Estrangeiro " + nome;
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
-            System.out.println("Numero de Passaporte :" + NumPassaporte + ""
-                    + "\nNome Completo :" + nome
-                    + "\nNumero Celular :" + numCelular
-                    + "\nEndereço :" + endereco
-                    + "\nCPF :" + cpf
-                    + "\nData :" + dataformatada
-                    + "\nEmail :" + email
-                    + "\nEstado :" + estado
-                    + "\nEstado Civil :" + estadocivil
-                    + "\nFunção :" + funcao
-                    + "\nLocal da Função :" + localfuncao
-                    + "\nSexo :" + sexo);
+            if (!email.matches(emailv)) {
+
+                JOptionPane.showMessageDialog(null, "Verifica o email esta incorreto");
+
+            } else {
+
+                System.out.println("Numero de Passaporte :" + NumPassaporte + ""
+                        + "\nNome Completo :" + nome
+                        + "\nNumero Celular :" + numCelular
+                        + "\nEndereço :" + endereco
+                        + "\nCPF :" + cpf
+                        + "\nData :" + dataformatada
+                        + "\nEmail :" + email
+                        + "\nEstado :" + estado
+                        + "\nEstado Civil :" + estadocivil
+                        + "\nFunção :" + funcao
+                        + "\nLocal da Função :" + localfuncao
+                        + "\nSexo :" + sexo);
+            }
 
         }
 

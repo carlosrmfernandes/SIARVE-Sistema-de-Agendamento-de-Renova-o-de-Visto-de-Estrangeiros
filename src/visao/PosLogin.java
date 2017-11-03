@@ -21,7 +21,7 @@ public class PosLogin extends javax.swing.JFrame {
 
     public PosLogin() {
         initComponents();
-        setSize(1114, 608);
+        setSize(1114, 645);
         setLocationRelativeTo(this);
         setTitle("SIARVE - Agendamento");
 
