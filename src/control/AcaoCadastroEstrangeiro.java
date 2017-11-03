@@ -67,9 +67,7 @@ public class AcaoCadastroEstrangeiro implements ActionListener {
             String dataformatada = deteformat.format(data);
 
             if (!email.matches(emailv)) {
-
                 JOptionPane.showMessageDialog(null, "Verifica o email esta incorreto");
-
             } else {
                 Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Cadastrou No Sistema O Estrangeiro " + nome;
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
