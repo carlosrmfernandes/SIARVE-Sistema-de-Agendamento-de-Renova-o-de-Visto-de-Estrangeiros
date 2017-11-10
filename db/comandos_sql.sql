@@ -2,6 +2,15 @@ CREATE TABLE produtos(
 codigo integer not null,
 descricao varchar(30) not null
 )
+CREATE TABLE "COLLEAGUES" (
+    "ID" INTEGER not null primary key,
+    "FIRSTNAME" VARCHAR(30),
+    "LASTNAME" VARCHAR(30),
+    "TITLE" VARCHAR(10),
+    "DEPARTMENT" VARCHAR(20),
+    "EMAIL" VARCHAR(60)
+);
+
 
 insert into produtos(codigo, descricao)
 values(1,'arroz')
