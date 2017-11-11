@@ -14,3 +14,20 @@
 03/11/2017 16:47:22 Usuário Carlos Visualizou quem foram Os Desenvolvedores do sistema
 03/11/2017 16:47:25 Usuário Carlos Entrou na Opção Arquivo Sair - Encerrando o Sistema
 ========================================================================
+10/11/2017 19:22:22 Usuário Carlos Logou No Sistema 
+10/11/2017 19:22:28 Usuário Carlos Entrou na Opção Arquivo Novo - Agendamento do visto
+10/11/2017 19:25:30 Usuário Carlos Entrou na Opção Cadastro  - Cadastro do Funcionário
+10/11/2017 19:33:22 Usuário Carlos Entrou na Opção Cadastro  - Cadastro do Estrangeiro
+10/11/2017 22:39:48 Usuário Carlos Lipou os campos do cadastro de Estrangeiro
+10/11/2017 22:42:26 Usuário Carlos Logou No Sistema 
+10/11/2017 22:42:32 Usuário Carlos Entrou na Opção Arquivo Novo - Agendamento do visto
+10/11/2017 22:42:33 Usuário Carlos Limpou os Campos de Agendamento
+10/11/2017 22:42:35 Usuário Carlos Limpou os Campos de Agendamento
+10/11/2017 22:42:35 Usuário Carlos Limpou os Campos de Agendamento
+10/11/2017 22:42:36 Usuário Carlos Limpou os Campos de Agendamento
+10/11/2017 22:43:14 Usuário Carlos Agendou a Renovação do visto com o Codigo de codigosolicitacao 123
+10/11/2017 22:43:34 Usuário Carlos Entrou na Opção Arquivo Sair - Encerrando o Sistema
+========================================================================
+10/11/2017 22:43:50 Usuário fer Logou No Sistema 
+10/11/2017 22:43:54 Usuário fer Entrou na Opção Arquivo Sair - Encerrando o Sistema
+========================================================================

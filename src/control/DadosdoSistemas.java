@@ -65,7 +65,7 @@ public class DadosdoSistemas {
 
                 StringBuilder a = sb.append(bufferedReader.readLine());
                 nome = a.toString();
-                System.out.print(nome);
+                //System.out.print(nome);
             }
             return sb.toString();
         } catch (IOException ex) {
