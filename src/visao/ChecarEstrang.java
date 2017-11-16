@@ -47,7 +47,6 @@ public class ChecarEstrang extends javax.swing.JInternalFrame {
         jTable1 = new javax.swing.JTable();
         jlbnumpassap = new javax.swing.JLabel();
         jtfnumpassap = new javax.swing.JTextField();
-        jbtBuscar = new javax.swing.JButton();
         jbtApagar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jtbDados = new javax.swing.JTable();
@@ -68,16 +67,6 @@ public class ChecarEstrang extends javax.swing.JInternalFrame {
         setClosable(true);
 
         jlbnumpassap.setText("Num' Passaporte");
-
-        jbtBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/novo.png"))); // NOI18N
-        jbtBuscar.setText("Buscar");
-        jbtBuscar.addActionListener(l);
-        jbtBuscar.setActionCommand("buscar");
-        jbtBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtBuscarActionPerformed(evt);
-            }
-        });
 
         jbtApagar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/apagar.png"))); // NOI18N
         jbtApagar.setText("Apagar");
@@ -111,21 +100,19 @@ public class ChecarEstrang extends javax.swing.JInternalFrame {
                         .addComponent(jlbnumpassap)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jtfnumpassap)
-                        .addGap(18, 18, 18)
-                        .addComponent(jbtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jbtApagar, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jbtApagar, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbtApagar)
-                    .addComponent(jlbnumpassap)
-                    .addComponent(jbtBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jtfnumpassap, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jlbnumpassap)
+                        .addComponent(jtfnumpassap, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE))
+                    .addComponent(jbtApagar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(17, 17, 17)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
@@ -138,17 +125,12 @@ public class ChecarEstrang extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtApagarActionPerformed
 
-    private void jbtBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtBuscarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbtBuscarActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JButton jbtApagar;
-    private javax.swing.JButton jbtBuscar;
     private javax.swing.JLabel jlbnumpassap;
     private javax.swing.JTable jtbDados;
     private javax.swing.JTextField jtfnumpassap;

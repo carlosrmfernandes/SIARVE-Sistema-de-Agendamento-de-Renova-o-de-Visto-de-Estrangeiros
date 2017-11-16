@@ -28,11 +28,12 @@ public class AcaochecarEstrang implements ActionListener {
     private String Dados = null;
     private String nomeArquivo = "Dados_do_Sistema.txt";
     private final String nomeArquivoLogin = "Ultimo_Login.txt";
+    DadosControleDb dbcontrol = new DadosControleDb();
 
     public AcaochecarEstrang(ChecarEstrang checarestrang) {
         this.checarestrang = checarestrang;
     }
-    
+
     private String getDateTime() {
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         Date date = new Date();
@@ -41,34 +42,36 @@ public class AcaochecarEstrang implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
 
-        if ("buscar".equals(e.getActionCommand())) {
-            try {
-                modelchecarEstrang = checarestrang.getModelChecarestrang();
-            } catch (Excesao ex) {
-                JOptionPane.showMessageDialog(null, ex.getMessage());
-                return;
-            }
-            modelchecarEstrang.getNumpassap();
-            numpassap = modelchecarEstrang.getNumpassap();
-
-            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Pesquisou Pelo Estrangeiro que Contem o N' do Passaporte :" + numpassap;
-            dados.gravarArquivodadossistema(nomeArquivo, Dados);
-
-            System.out.println("Numero do Passaporte : " + numpassap);
-
-        }
+        //funca de Busnca 
+//        if ("buscar".equals(e.getActionCommand())) {
+//            try {
+//                modelchecarEstrang = checarestrang.getModelChecarestrang();
+//            } catch (Excesao ex) {
+//                JOptionPane.showMessageDialog(null, ex.getMessage());
+//                return;
+//            }
+//            modelchecarEstrang.getNumpassap();
+//            numpassap = modelchecarEstrang.getNumpassap();
+//
+//            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Pesquisou Pelo Estrangeiro que Contem o N' do Passaporte :" + numpassap;
+//            dados.gravarArquivodadossistema(nomeArquivo, Dados);
+//
+//            System.out.println("Numero do Passaporte : " + numpassap);
+//
+//        }
         if ("apagar".equals(e.getActionCommand())) {
             try {
                 modelchecarEstrang = checarestrang.getModelChecarestrang();
+
             } catch (Excesao ex) {
                 JOptionPane.showMessageDialog(null, ex.getMessage());
                 return;
             }
+            numpassap = modelchecarEstrang.getNumpassap();
             Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Apagou o Estrangeiro que Contem o N' do Passaporte :" + numpassap;
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
-            JOptionPane.showMessageDialog(null, " Não foi implementado essa função ");
-
+            //dbcontrol.delete(numpassap);
         }
     }
 

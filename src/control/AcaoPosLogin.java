@@ -43,6 +43,7 @@ public class AcaoPosLogin implements ActionListener {
     private String Dados = null;
     private String nomeArquivo = "Dados_do_Sistema.txt";
     private final String nomeArquivoLogin = "Ultimo_Login.txt";
+    DadosControleDb dbcontrol = new DadosControleDb();
 
     public AcaoPosLogin(PosLogin novo) {
         this.novo = novo;
@@ -179,7 +180,7 @@ public class AcaoPosLogin implements ActionListener {
 
                 Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro";
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
-
+                // dbcontrol.getAll();          
                 try {
                     obj5.setSelected(true);
                 } catch (PropertyVetoException ex) {

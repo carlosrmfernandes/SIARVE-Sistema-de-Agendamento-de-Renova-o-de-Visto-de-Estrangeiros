@@ -30,7 +30,8 @@ public class AcaoCadastroEstrangeiro implements ActionListener {
     private String nomeArquivo = "Dados_do_Sistema.txt";
     private final String nomeArquivoLogin = "Ultimo_Login.txt";
     private String emailv = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
-
+    
+    DadosControleDb dbcontrol  = new DadosControleDb();
     public AcaoCadastroEstrangeiro(CadastroEstrangeiro cadastroestrangeiro) {
         this.cadastroestrangeiro = cadastroestrangeiro;
     }
@@ -71,6 +72,8 @@ public class AcaoCadastroEstrangeiro implements ActionListener {
             } else {
                 Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Cadastrou No Sistema O Estrangeiro " + nome;
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
+               
+                //dbcontrol.cadstroestrangeiro(modelcadastroEstrangeiro);
 
                 System.out.println("Numero de Passaporte :" + NumPassaporte + ""
                         + "\nNome Completo :" + nome

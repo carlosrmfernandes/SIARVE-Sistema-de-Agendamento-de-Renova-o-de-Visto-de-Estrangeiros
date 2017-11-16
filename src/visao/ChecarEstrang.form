@@ -53,10 +53,8 @@
                       <Component id="jlbnumpassap" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jtfnumpassap" max="32767" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jbtBuscar" min="-2" pref="101" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jbtApagar" min="-2" pref="92" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jbtApagar" min="-2" pref="129" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -67,13 +65,14 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jbtApagar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jlbnumpassap" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jbtBuscar" alignment="3" max="32767" attributes="0"/>
-                  <Component id="jtfnumpassap" alignment="3" pref="37" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jlbnumpassap" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfnumpassap" alignment="3" pref="37" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="jbtApagar" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+              <EmptySpace min="17" pref="17" max="-2" attributes="0"/>
               <Component id="jScrollPane2" min="-2" pref="307" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>
@@ -87,20 +86,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jtfnumpassap">
-    </Component>
-    <Component class="javax.swing.JButton" name="jbtBuscar">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Img/novo.png"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Buscar"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbtBuscarActionPerformed"/>
-      </Events>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jbtBuscar.addActionListener(l);&#xa;jbtBuscar.setActionCommand(&quot;buscar&quot;);"/>
-      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jbtApagar">
       <Properties>
