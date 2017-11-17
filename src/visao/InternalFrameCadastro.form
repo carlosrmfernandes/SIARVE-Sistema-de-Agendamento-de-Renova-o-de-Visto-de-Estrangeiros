@@ -64,15 +64,22 @@
                           <Component id="jlbcodigosolicitacao" min="-2" max="-2" attributes="0"/>
                           <Component id="jlbdescricao" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="20" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jScrollPane1" pref="429" max="32767" attributes="0"/>
-                          <Component id="jtfcodigosolicitacao" max="32767" attributes="0"/>
+                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane1" min="-2" pref="429" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                               <Component id="jcbtipo" alignment="1" min="-2" pref="180" max="-2" attributes="0"/>
                               <Component id="jDate" alignment="0" min="-2" pref="180" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jtfcodigosolicitacao" min="-2" pref="163" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="numpassaporte" min="-2" pref="91" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jtfnumpassaporte" min="-2" pref="157" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -106,6 +113,8 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jtfcodigosolicitacao" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                   <Component id="jlbcodigosolicitacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="numpassaporte" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jtfnumpassaporte" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
@@ -303,6 +312,13 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="try{&#xa;javax.swing.text.MaskFormatter formataIntervalo = new javax.swing.text.MaskFormatter(&quot;(##)#########&quot;);&#xa;jtfcelular = new javax.swing.JFormattedTextField(formataIntervalo);&#xa;}catch(Exception e){&#xa;&#xa;} &#xa;&#xa;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="numpassaporte">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="N&apos;Passaporte"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jtfnumpassaporte">
     </Component>
   </SubComponents>
 </Form>

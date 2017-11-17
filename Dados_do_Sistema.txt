@@ -2,3 +2,10 @@
 16/11/2017 17:29:33 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
 16/11/2017 17:29:38 Usuário Carlos Entrou na Opção Arquivo Sair - Encerrando o Sistema
 ========================================================================
+17/11/2017 01:51:55 Usuário Carlos Logou No Sistema 
+17/11/2017 01:52:00 Usuário Carlos Entrou na Opção Arquivo Sair - Encerrando o Sistema
+========================================================================
+17/11/2017 01:52:21 Usuário Carlos Logou No Sistema 
+17/11/2017 01:52:29 Usuário Carlos Entrou na Opção Arquivo Novo - Agendamento do visto
+17/11/2017 01:52:37 Usuário Carlos Entrou na Opção Arquivo Sair - Encerrando o Sistema
+========================================================================

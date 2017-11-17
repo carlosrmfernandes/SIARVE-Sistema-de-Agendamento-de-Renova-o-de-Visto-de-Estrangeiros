@@ -44,6 +44,7 @@ public class AcaoCadastroFuncionario implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if ("salvar".equals(e.getActionCommand())) {
+            
             try {
                 modelCadastroFuncionario = cadastroFuncionario.modelcadastro();
             } catch (Excesao ex) {
@@ -94,7 +95,7 @@ public class AcaoCadastroFuncionario implements ActionListener {
             }
 
         }
-
+        
         if ("limpar".equals(e.getActionCommand())) {
             Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Lipou os campos do cadastro de Funcionário";
             dados.gravarArquivodadossistema(nomeArquivo, Dados);

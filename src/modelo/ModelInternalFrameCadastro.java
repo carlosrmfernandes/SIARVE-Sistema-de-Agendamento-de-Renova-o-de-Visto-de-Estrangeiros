@@ -14,7 +14,7 @@ import java.util.Date;
 public class ModelInternalFrameCadastro {
 
     private Date data;
-    private String Descricao, horario,tipo,sexo,email,celular;
+    private String Descricao, horario,tipo,sexo,email,celular,numpassaporte;
     private int codigosolicitacao;
 
     public String getCelular() {
@@ -23,6 +23,14 @@ public class ModelInternalFrameCadastro {
 
     public void setCelular(String celular) {
         this.celular = celular;
+    }
+
+    public String getNumpassaporte() {
+        return numpassaporte;
+    }
+
+    public void setNumpassaporte(String numpassaporte) {
+        this.numpassaporte = numpassaporte;
     }
 
     

@@ -23,7 +23,7 @@ import javax.swing.JOptionPane;
 public class AcaoInternalFrameCadastro implements ActionListener {
 
     private Date data;
-    private String Descricao, horario, tipo, sexo, email, celular;
+    private String Descricao, horario, tipo, sexo, email, celular, numpassaporte;
     private int codigosolicitacao;
     private PosLogin novo;
     private ModelInternalFrameCadastro intelnalframecadastro;
@@ -63,6 +63,8 @@ public class AcaoInternalFrameCadastro implements ActionListener {
             sexo = intelnalframecadastro.getSexo();
             email = intelnalframecadastro.getEmail();
             celular = intelnalframecadastro.getCelular();
+            numpassaporte = intelnalframecadastro.getNumpassaporte();
+            String nomefuncionario = dados.lerArquivo(nomeArquivoLogin);
 
             SimpleDateFormat deteformat = new SimpleDateFormat("dd/MM/yyyy");
             String dataformatada = deteformat.format(data);
@@ -82,7 +84,9 @@ public class AcaoInternalFrameCadastro implements ActionListener {
                         + "\nTipo :" + tipo + ""
                         + "\nSexo :" + sexo + ""
                         + "\nEmail :" + email + ""
-                        + "\nCelualr : " + celular);
+                        + "\nCelualr : " + celular + ""
+                        + "\nFuncionario : " + nomefuncionario + ""
+                        + "\nNumero do passaporte : " + numpassaporte);
             }
 
         }

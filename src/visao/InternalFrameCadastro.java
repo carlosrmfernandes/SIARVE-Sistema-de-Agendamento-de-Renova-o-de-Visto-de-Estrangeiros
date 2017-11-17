@@ -45,6 +45,10 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
         if (jtfcelular.getText().equals("(  )         ")) {
             throw new Excesao("Deve preencher a o celular");
         }
+         if ("".equals(jtfnumpassaporte.getText())) {
+            throw new Excesao("Deve preencher o Numero do Passaporte");
+        }
+
 
         ModelInternalFrameCadastro modelcadastro = new ModelInternalFrameCadastro();
         modelcadastro.setData(jDate.getDate());
@@ -56,6 +60,7 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
         modelcadastro.setSexo((String) jcbsexo.getSelectedItem());
         modelcadastro.setEmail(jtfemail.getText());
         modelcadastro.setCelular(jtfcelular.getText());
+        modelcadastro.setNumpassaporte(jtfnumpassaporte.getText());
         return modelcadastro;
     }
 
@@ -65,6 +70,7 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
         jDate.setDate(null);
         jtfemail.setText("");
         jtfcelular.setText("");
+        jtfnumpassaporte.setText("");
 
     }
 
@@ -111,6 +117,9 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
         }catch(Exception e){
 
         }
+
+        numpassaporte = new javax.swing.JLabel();
+        jtfnumpassaporte = new javax.swing.JTextField();
 
         jLabel2.setText("jLabel2");
 
@@ -189,6 +198,8 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
 
         jlbcelular.setText("Celular");
 
+        numpassaporte.setText("N'Passaporte");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -218,13 +229,19 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlbcodigosolicitacao)
                             .addComponent(jlbdescricao))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE)
-                            .addComponent(jtfcodigosolicitacao)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jcbtipo, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jtfcodigosolicitacao, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(numpassaporte, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jtfnumpassaporte, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(8, 8, 8))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlbemail, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -247,7 +264,9 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtfcodigosolicitacao, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlbcodigosolicitacao))
+                    .addComponent(jlbcodigosolicitacao)
+                    .addComponent(numpassaporte)
+                    .addComponent(jtfnumpassaporte, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(38, 38, 38)
@@ -345,6 +364,8 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jtfcelular;
     private javax.swing.JTextField jtfcodigosolicitacao;
     private javax.swing.JTextField jtfemail;
+    private javax.swing.JTextField jtfnumpassaporte;
+    private javax.swing.JLabel numpassaporte;
     // End of variables declaration//GEN-END:variables
 
 }
