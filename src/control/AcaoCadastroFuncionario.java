@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.sql.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -37,8 +37,7 @@ public class AcaoCadastroFuncionario implements ActionListener {
 
     private String getDateTime() {
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        Date date = new Date();
-        return dateFormat.format(date);
+        return dateFormat.format(new java.util.Date());
     }
 
     public void actionPerformed(ActionEvent e) {

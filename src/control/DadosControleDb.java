@@ -9,26 +9,33 @@ package control;
  *
  * @author Polo UAB
  */
-import java.net.ConnectException;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 import modelo.ModelCadastroEstrangeiro;
-import modelo.ModelCadastroFuncionario;
 
 public class DadosControleDb {
 
+    public Vector<ModelCadastroEstrangeiro> getAllVector() {
+        Vector<ModelCadastroEstrangeiro> v = new Vector<ModelCadastroEstrangeiro>();
+        List<ModelCadastroEstrangeiro> list = getAll();
+        list.forEach( m -> {
+            v.add(m);
+        });
+        return v;
+    }
+    
     public List<ModelCadastroEstrangeiro> getAll() {
         List<ModelCadastroEstrangeiro> lista = new ArrayList<ModelCadastroEstrangeiro>();
         Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select nome, NumPassaporte,NumCelular,Endereco from CADASTROESNTRANGEIRO";
+            String sql = "select nome, numpassaporte ,celular ,endereco from CADASTROESTRANGEIRO";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
@@ -70,7 +77,7 @@ public class DadosControleDb {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "delete from CADASTROESNTRANGEIRO where codigo = ?";
+            String sql = "delete from CADASTROESTRANGEIRO where numpassaporte = ?";
             ps = conn.prepareStatement(sql);
             ps.setString(1, numpassaporte);
             ps.execute();
@@ -110,19 +117,19 @@ public class DadosControleDb {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "insert into CADASTROESNTRANGEIRO (NumPassaporte, nome, numCelular, endereco, cpf, data, email, estado, estadocivil, funcao, localfuncao, sexo) values (?,?,?,?,?,?,?,?,?,?,?,?)";
+            String sql = "insert into CADASTROESTRANGEIRO (numpassaporte, celular, nome, endereco, email, data, estadocivil, funcao, cpf, localfuncao, estado, sexo) values (?,?,?,?,?,?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
             ps.setString(1, modelcadastroestrangeiro.getNumPassaporte());
-            ps.setString(2, modelcadastroestrangeiro.getNome());
-            ps.setString(3, modelcadastroestrangeiro.getNumCelular());
+            ps.setString(2, modelcadastroestrangeiro.getNumCelular());
+            ps.setString(3, modelcadastroestrangeiro.getNome());
             ps.setString(4, modelcadastroestrangeiro.getEndereco());
-            ps.setString(5, modelcadastroestrangeiro.getCpf());
-            ps.setDate(6, (Date) modelcadastroestrangeiro.getData());
-            ps.setString(7, modelcadastroestrangeiro.getEmail());
-            ps.setString(8, modelcadastroestrangeiro.getEstado());
-            ps.setString(9, modelcadastroestrangeiro.getEstadocivil());
-            ps.setString(10, modelcadastroestrangeiro.getFuncao());
-            ps.setString(11, modelcadastroestrangeiro.getLocalfuncao());
+            ps.setString(5, modelcadastroestrangeiro.getEmail());
+            ps.setDate(6, modelcadastroestrangeiro.getData());
+            ps.setString(7, modelcadastroestrangeiro.getEstadocivil());
+            ps.setString(8, modelcadastroestrangeiro.getFuncao());
+            ps.setString(9, modelcadastroestrangeiro.getCpf());
+            ps.setString(10, modelcadastroestrangeiro.getLocalfuncao());
+            ps.setString(11, modelcadastroestrangeiro.getEstado());
             ps.setString(12, modelcadastroestrangeiro.getSexo());
             ps.execute();
 

@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.sql.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -38,8 +38,7 @@ public class AcaoCadastroEstrangeiro implements ActionListener {
 
     private String getDateTime() {
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        Date date = new Date();
-        return dateFormat.format(date);
+        return dateFormat.format(new java.util.Date());
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -73,20 +72,20 @@ public class AcaoCadastroEstrangeiro implements ActionListener {
                 Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Cadastrou No Sistema O Estrangeiro " + nome;
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
                
-                //dbcontrol.cadstroestrangeiro(modelcadastroEstrangeiro);
+                dbcontrol.cadstroestrangeiro(modelcadastroEstrangeiro);
 
-                System.out.println("Numero de Passaporte :" + NumPassaporte + ""
-                        + "\nNome Completo :" + nome
-                        + "\nNumero Celular :" + numCelular
-                        + "\nEndereço :" + endereco
-                        + "\nCPF :" + cpf
-                        + "\nData :" + dataformatada
-                        + "\nEmail :" + email
-                        + "\nEstado :" + estado
-                        + "\nEstado Civil :" + estadocivil
-                        + "\nFunção :" + funcao
-                        + "\nLocal da Função :" + localfuncao
-                        + "\nSexo :" + sexo);
+//                System.out.println("Numero de Passaporte :" + NumPassaporte + ""
+//                        + "\nNome Completo :" + nome
+//                        + "\nNumero Celular :" + numCelular
+//                        + "\nEndereço :" + endereco
+//                        + "\nCPF :" + cpf
+//                        + "\nData :" + dataformatada
+//                        + "\nEmail :" + email
+//                        + "\nEstado :" + estado
+//                        + "\nEstado Civil :" + estadocivil
+//                        + "\nFunção :" + funcao
+//                        + "\nLocal da Função :" + localfuncao
+//                        + "\nSexo :" + sexo);
             }
 
         }

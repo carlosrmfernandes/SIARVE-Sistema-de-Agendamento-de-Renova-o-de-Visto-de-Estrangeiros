@@ -22,6 +22,7 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -30,6 +31,7 @@ import javax.swing.JOptionPane;
 public class AcaoPosLogin implements ActionListener {
 
     private PosLogin novo;
+    private ChecarEstrang estrang;
 
     private String pesquisar;
     private InternalFrameCadastro obj;
@@ -47,6 +49,7 @@ public class AcaoPosLogin implements ActionListener {
 
     public AcaoPosLogin(PosLogin novo) {
         this.novo = novo;
+
     }
 
     private String getDateTime() {
@@ -180,7 +183,6 @@ public class AcaoPosLogin implements ActionListener {
 
                 Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro";
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
-                // dbcontrol.getAll();          
                 try {
                     obj5.setSelected(true);
                 } catch (PropertyVetoException ex) {

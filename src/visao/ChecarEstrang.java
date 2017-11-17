@@ -6,7 +6,12 @@
 package visao;
 
 import control.AcaochecarEstrang;
+import control.DadosControleDb;
 import exception.Excesao;
+import java.util.Vector;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import modelo.ModelCadastroEstrangeiro;
 import modelo.ModelChecarEstrang;
 
 /**
@@ -19,20 +24,59 @@ public class ChecarEstrang extends javax.swing.JInternalFrame {
      * Creates new form ChecarEstrang
      */
     private AcaochecarEstrang l = new AcaochecarEstrang(this);
+
     public ChecarEstrang() {
         initComponents();
+        DadosControleDb k = new DadosControleDb();
+        final Vector<ModelCadastroEstrangeiro> vector = k.getAllVector();
+        jtbDados.setModel(new DefaultTableModel() {
+            @Override
+            public Object getValueAt(int row, int column) {
+                ModelCadastroEstrangeiro item = vector.get(row);
+                if (column == 0) {
+                  
+                    return item.getNome();
+                } else if (column == 1) {
+                    
+                    return item.getNumPassaporte();
+                } else if (column == 2) {
+                  
+                    return item.getNumCelular();
+                } else if (column == 3) {
+                    return item.getEndereco();
+                }
+
+                return null;
+            }
+
+            @Override
+            public int getColumnCount() {
+                return 4;//TODO: Ajustar de acordo com o número de colunas
+            }
+
+            @Override
+            public int getRowCount() {
+                return vector.size();
+            }
+
+            @Override
+            public Vector getDataVector() {
+                return vector;
+            }
+        });
+        
     }
-    public ModelChecarEstrang getModelChecarestrang() throws Excesao{
+
+    public ModelChecarEstrang getModelChecarestrang() throws Excesao {
         if ("".equals(jtfnumpassap.getText())) {
             throw new Excesao("Deve preencher o Numero do Passaporte");
 
         }
-        
+
         ModelChecarEstrang modelchecarestrang = new ModelChecarEstrang();
         modelchecarestrang.setNumpassap(jtfnumpassap.getText());
         return modelchecarestrang;
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -80,7 +124,7 @@ public class ChecarEstrang extends javax.swing.JInternalFrame {
 
         jtbDados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Carlos Fernandes", "12Nh728C", "48996684418", "Criciuma"}
+                {null, null, null, null}
             },
             new String [] {
                 "Nome", "Passaporte", "Celular", "Endereço"

@@ -1,4 +1,8 @@
 CREATE SCHEMA PUBLIC AUTHORIZATION DBA
+CREATE MEMORY TABLE "CADASTROESNTRANGEIRO"("NumPassaporte" VARCHAR(30) NOT NULL PRIMARY KEY,"nome" VARCHAR(30),"numCelular" VARCHAR(30),"endereco" VARCHAR(30),"cpf" VARCHAR(30),"data" DATE,"email" VARCHAR(30),"estado" VARCHAR(30),"estadocivil" VARCHAR(30),"funcao" VARCHAR(30),"localfuncao" VARCHAR(30),"sexo" VARCHAR(30))
 CREATE USER SA PASSWORD ""
 GRANT DBA TO SA
 SET WRITE_DELAY 10
+SET SCHEMA PUBLIC
+INSERT INTO "CADASTROESNTRANGEIRO" VALUES('N11','Carlos','(48)999999','Luanda','142-968-632','2010-10-10','ca@unesc.net','lunada','casdado','estudante','udesc','M')
+INSERT INTO "CADASTROESNTRANGEIRO" VALUES('U89IO','Carlos','(48)999999','Luanda','142-968-632','2010-10-10','ca@unesc.net','lunada','casdado','estudante','udesc','M')

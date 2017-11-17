@@ -71,7 +71,7 @@ public class CadastroEstrangeiro extends javax.swing.JInternalFrame {
         modelcadastroest.setNumCelular(jtfNmcelular.getText());
         modelcadastroest.setNumPassaporte(jtfNumPassaport.getText());
         modelcadastroest.setCpf(jtfcpf.getText());
-        modelcadastroest.setData(jdata.getDate());
+        modelcadastroest.setData(new java.sql.Date(jdata.getDate().getTime()));
         modelcadastroest.setEmail(jtfemail.getText());
         modelcadastroest.setEstado(jtfestado.getText());
         modelcadastroest.setEstadocivil((String) jcbestadocivil.getSelectedItem());

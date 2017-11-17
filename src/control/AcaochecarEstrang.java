@@ -71,7 +71,7 @@ public class AcaochecarEstrang implements ActionListener {
             Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Apagou o Estrangeiro que Contem o N' do Passaporte :" + numpassap;
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
-            //dbcontrol.delete(numpassap);
+            dbcontrol.delete(numpassap);
         }
     }
 

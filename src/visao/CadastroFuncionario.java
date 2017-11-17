@@ -7,6 +7,7 @@ package visao;
 
 import control.AcaoCadastroFuncionario;
 import exception.Excesao;
+import java.sql.Date;
 import modelo.ModelCadastroFuncionario;
 
 /**
@@ -60,7 +61,7 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
         modelcadastrofunc.setSenha(jPasswordsenha.getText());
         modelcadastrofunc.setConfsenha(jPasswordConfSenha.getText());
         modelcadastrofunc.setEndereco(jtfendereco.getText());
-        modelcadastrofunc.setData(jdatacadastro.getDate());
+        modelcadastrofunc.setData((Date) jdatacadastro.getDate());
         modelcadastrofunc.setTipopessoa((String) jcbtipopessoa.getSelectedItem());
         modelcadastrofunc.setEstado((String) jcbestado.getSelectedItem());
         modelcadastrofunc.setSexo((String) jcbsexo.getSelectedItem());
