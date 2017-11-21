@@ -30,6 +30,7 @@ public class AcaoCadastroFuncionario implements ActionListener {
     private String nomeArquivo = "Dados_do_Sistema.txt";
     private final String nomeArquivoLogin = "Ultimo_Login.txt";
     private String emailv = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
+    DadosControleDbFuncionario db = new DadosControleDbFuncionario();
 
     public AcaoCadastroFuncionario(CadastroFuncionario cadastroFuncionario) {
         this.cadastroFuncionario = cadastroFuncionario;
@@ -43,7 +44,7 @@ public class AcaoCadastroFuncionario implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if ("salvar".equals(e.getActionCommand())) {
-            
+
             try {
                 modelCadastroFuncionario = cadastroFuncionario.modelcadastro();
             } catch (Excesao ex) {
@@ -72,18 +73,8 @@ public class AcaoCadastroFuncionario implements ActionListener {
                 if (email.matches(emailv)) {
                     Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Cadastrou No Sistema O Funcionário " + nome;
                     dados.gravarArquivodadossistema(nomeArquivo, Dados);
+                    db.cadstroestroFuncionario(modelCadastroFuncionario, email, senha);
 
-                    System.out.println("Email :" + email + ""
-                            + "\nSenha :" + senha + ""
-                            + "\nEdereco : " + endereco + ""
-                            + "\nTipo de Pessoa : " + tipopessoa + ""
-                            + "\nEstado : " + estado + ""
-                            + "\nSexo : " + sexo + ""
-                            + "\nNome : " + nome + ""
-                            + "\nEstado Civil : " + estadociveil + ""
-                            + "\nData de Registro :" + dataformatada + ""
-                            + "\nCelular : " + celular + ""
-                            + "\nCPF :" + cpf);
                 } else {
                     JOptionPane.showMessageDialog(null, "Verifica o email esta incorreto");
                 }
@@ -94,7 +85,7 @@ public class AcaoCadastroFuncionario implements ActionListener {
             }
 
         }
-        
+
         if ("limpar".equals(e.getActionCommand())) {
             Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Lipou os campos do cadastro de Funcionário";
             dados.gravarArquivodadossistema(nomeArquivo, Dados);

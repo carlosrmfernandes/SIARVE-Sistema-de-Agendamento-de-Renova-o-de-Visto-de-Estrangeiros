@@ -6,7 +6,13 @@
 package visao;
 
 import control.AcaoRemoveFunc;
+import control.DadosControleDb;
+import control.DadosControleDbFuncionario;
 import exception.Excesao;
+import java.util.Vector;
+import javax.swing.table.DefaultTableModel;
+import modelo.ModelCadastroEstrangeiro;
+import modelo.ModelCadastroFuncionario;
 import modelo.ModelChecarFunc;
 
 /**
@@ -21,7 +27,7 @@ public class ChecarFunc extends javax.swing.JInternalFrame {
     private AcaoRemoveFunc l = new AcaoRemoveFunc(this);
 
     public ModelChecarFunc getModelChecarFunc() throws Excesao {
-       
+
         if ("".equals(jtfemail.getText())) {
             throw new Excesao("Deve preencher o email");
 
@@ -34,6 +40,35 @@ public class ChecarFunc extends javax.swing.JInternalFrame {
 
     public ChecarFunc() {
         initComponents();
+        DadosControleDbFuncionario k = new DadosControleDbFuncionario();
+        final Vector<ModelCadastroFuncionario> vector = k.getAllVector();
+        jtbDados.setModel(new DefaultTableModel() {
+            @Override
+            public Object getValueAt(int row, int column) {
+                ModelCadastroFuncionario item = vector.get(row);
+                if (column == 0) {
+
+                    return item.getEmail();
+                }
+
+                return null;
+            }
+
+            @Override
+            public int getColumnCount() {
+                return 1;//TODO: Ajustar de acordo com o número de colunas
+            }
+
+            @Override
+            public int getRowCount() {
+                return vector.size();
+            }
+
+            @Override
+            public Vector getDataVector() {
+                return vector;
+            }
+        });
     }
 
     /**
@@ -68,7 +103,7 @@ public class ChecarFunc extends javax.swing.JInternalFrame {
         jtbDados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
-                {"carlosr.m.fernandes@unesc.net"}
+                {null}
             },
             new String [] {
                 "Email do Funcionário"

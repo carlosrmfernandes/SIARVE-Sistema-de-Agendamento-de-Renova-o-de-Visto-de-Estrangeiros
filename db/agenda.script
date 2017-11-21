@@ -5,5 +5,5 @@ CREATE USER SA PASSWORD ""
 GRANT DBA TO SA
 SET WRITE_DELAY 10
 SET SCHEMA PUBLIC
-INSERT INTO CADASTROESTRANGEIRO VALUES('MJ368','(78)989959555','Carlos Fernandes','Brasil','carlos@unesc.net','2017-11-07','Divorcciado','Estudante','256.986.325-65','Lunanda','Luanda','Masculino')
 INSERT INTO CADASTROESTRANGEIRO VALUES('NJ978K','(25)698745896','Rafael Francisco Fernandes','Luanda 78','fernandes@unesc.net','2017-11-16','Solteiro','Estudante','125.369.854-41','Criciuma','Santa Catarina','Masculino')
+INSERT INTO AGENDAMENTO VALUES(145623,'NJ12KLU','Renovacao de Visto','2017-11-16','8:00','Estudante','Masculino','Carlos@unesc.net','(48)996684418','Carlos')

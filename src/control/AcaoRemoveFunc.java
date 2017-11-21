@@ -29,6 +29,7 @@ public class AcaoRemoveFunc implements ActionListener {
     private String nomeArquivo = "Dados_do_Sistema.txt";
     private final String nomeArquivoLogin = "Ultimo_Login.txt";
     private String emailv = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
+    DadosControleDbFuncionario db = new DadosControleDbFuncionario();
 
     public AcaoRemoveFunc(ChecarFunc checarfunc) {
         this.checarfunc = checarfunc;
@@ -57,7 +58,7 @@ public class AcaoRemoveFunc implements ActionListener {
             } else {
                 Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Apagou Funcionário com o email " + email;
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
-                JOptionPane.showMessageDialog(null, " Não foi implementado essa função ");
+                db.delete(email);
             }
         }
     }

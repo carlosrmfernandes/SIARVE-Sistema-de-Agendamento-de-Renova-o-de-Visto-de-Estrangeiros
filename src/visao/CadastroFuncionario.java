@@ -61,7 +61,7 @@ public class CadastroFuncionario extends javax.swing.JInternalFrame {
         modelcadastrofunc.setSenha(jPasswordsenha.getText());
         modelcadastrofunc.setConfsenha(jPasswordConfSenha.getText());
         modelcadastrofunc.setEndereco(jtfendereco.getText());
-        modelcadastrofunc.setData((Date) jdatacadastro.getDate());
+        modelcadastrofunc.setData(new java.sql.Date(jdatacadastro.getDate().getTime()));
         modelcadastrofunc.setTipopessoa((String) jcbtipopessoa.getSelectedItem());
         modelcadastrofunc.setEstado((String) jcbestado.getSelectedItem());
         modelcadastrofunc.setSexo((String) jcbsexo.getSelectedItem());
