@@ -45,13 +45,12 @@ public class InternalFrameCadastro extends javax.swing.JInternalFrame {
         if (jtfcelular.getText().equals("(  )         ")) {
             throw new Excesao("Deve preencher a o celular");
         }
-         if ("".equals(jtfnumpassaporte.getText())) {
+        if ("".equals(jtfnumpassaporte.getText())) {
             throw new Excesao("Deve preencher o Numero do Passaporte");
         }
 
-
         ModelInternalFrameCadastro modelcadastro = new ModelInternalFrameCadastro();
-        modelcadastro.setData(jDate.getDate());
+        modelcadastro.setData(new java.sql.Date(jDate.getDate().getTime()));
         modelcadastro.setDescricao(jTextAreaDescricao.getText());
         modelcadastro.setCodigosolicitacao(Integer.parseInt(jtfcodigosolicitacao.getText()));
 

@@ -34,6 +34,7 @@ public class AcaoInternalFrameCadastro implements ActionListener {
     private final String nomeArquivoLogin = "Ultimo_Login.txt";
 
     private String emailv = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
+    DadosControleDbAngendamento db = new DadosControleDbAngendamento();
 
     public AcaoInternalFrameCadastro(InternalFrameCadastro cadastro) {
         this.cadastro = cadastro;
@@ -77,16 +78,7 @@ public class AcaoInternalFrameCadastro implements ActionListener {
                 Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Agendou a Renovação do visto com o Codigo de codigosolicitacao " + codigosolicitacao;
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
-                System.out.println("Codigo de Solicitão :" + codigosolicitacao + ""
-                        + "\nDescrição :" + Descricao
-                        + "\nData :" + dataformatada
-                        + "\nHorário :" + horario + ""
-                        + "\nTipo :" + tipo + ""
-                        + "\nSexo :" + sexo + ""
-                        + "\nEmail :" + email + ""
-                        + "\nCelualr : " + celular + ""
-                        + "\nFuncionario : " + nomefuncionario + ""
-                        + "\nNumero do passaporte : " + numpassaporte);
+                db.cadstroestroAgendamento(intelnalframecadastro, dados.lerArquivo(nomeArquivoLogin));
             }
 
         }

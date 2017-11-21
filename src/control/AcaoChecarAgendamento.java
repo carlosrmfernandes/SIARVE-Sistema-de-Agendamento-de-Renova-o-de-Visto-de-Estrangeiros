@@ -28,6 +28,7 @@ public class AcaoChecarAgendamento implements ActionListener {
     private String Dados = null;
     private String nomeArquivo = "Dados_do_Sistema.txt";
     private final String nomeArquivoLogin = "Ultimo_Login.txt";
+    DadosControleDbAngendamento db = new DadosControleDbAngendamento();
 
     public AcaoChecarAgendamento(ChecarAgendamento checaragendamento) {
         this.checaragendamento = checaragendamento;
@@ -41,21 +42,6 @@ public class AcaoChecarAgendamento implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
 
-        if ("buscar".equals(e.getActionCommand())) {
-            try {
-                modelchecaragendamento = checaragendamento.modelchegaragendamento();
-            } catch (Excesao ex) {
-                JOptionPane.showMessageDialog(null, ex.getMessage());
-                return;
-            }
-            pesquisar = modelchecaragendamento.getCodigosolicitacao();
-
-            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Pesquisou Pelo Angendamento que Contem o Código de Solicitão :" + pesquisar;
-            dados.gravarArquivodadossistema(nomeArquivo, Dados);
-
-            System.out.println("Codigo :" + pesquisar);
-
-        }
         if ("apagar".equals(e.getActionCommand())) {
             try {
                 modelchecaragendamento = checaragendamento.modelchegaragendamento();
@@ -66,11 +52,11 @@ public class AcaoChecarAgendamento implements ActionListener {
             pesquisar = modelchecaragendamento.getCodigosolicitacao();
             Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Apagpou o Angendamento que Contem o Código de Solicitão :" + pesquisar;
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
-            JOptionPane.showMessageDialog(null, " Não foi implementado essa função ");
+            db.delete(pesquisar);
 
         }
         if ("limpar".equals(e.getActionCommand())) {
-            
+
             Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Limpou o Campos da Pesquisa de Agendamento";
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
 

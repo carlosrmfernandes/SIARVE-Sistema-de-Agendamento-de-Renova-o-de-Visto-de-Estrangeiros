@@ -6,8 +6,14 @@
 package visao;
 
 import control.AcaoChecarAgendamento;
+import control.DadosControleDb;
+import control.DadosControleDbAngendamento;
 import exception.Excesao;
+import java.util.Vector;
+import javax.swing.table.DefaultTableModel;
+import modelo.ModelCadastroEstrangeiro;
 import modelo.ModelChecarAgendamento;
+import modelo.ModelInternalFrameCadastro;
 
 /**
  *
@@ -41,6 +47,45 @@ public class ChecarAgendamento extends javax.swing.JInternalFrame {
 
     public ChecarAgendamento() {
         initComponents();
+
+        DadosControleDbAngendamento k = new DadosControleDbAngendamento();
+        final Vector<ModelInternalFrameCadastro> vector = k.getAllVector();
+        tbTable.setModel(new DefaultTableModel() {
+            @Override
+            public Object getValueAt(int row, int column) {
+                ModelInternalFrameCadastro item = vector.get(row);
+                if (column == 0) {
+
+                    return item.getCodigosolicitacao();
+                } else if (column == 1) {
+
+                    return item.getData();
+                } else if (column == 2) {
+
+                    return item.getHorario();
+                } else if (column == 3) {
+                    return item.getDescricao();
+                }
+
+                return null;
+            }
+
+            @Override
+            public int getColumnCount() {
+                return 4;//TODO: Ajustar de acordo com o número de colunas
+            }
+
+            @Override
+            public int getRowCount() {
+                return vector.size();
+            }
+
+            @Override
+            public Vector getDataVector() {
+                return vector;
+            }
+        });
+
     }
 
     /**
@@ -96,10 +141,8 @@ public class ChecarAgendamento extends javax.swing.JInternalFrame {
 
         tbTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"6381913", "2017-12-06", "16:30", "Renovação de Visto"},
-                {"6381913", "2017-12-06", "16:30", "Renovação de Visto"},
-                {"6381913", "2017-12-06", "16:30", "Renovação de Visto"},
-                {"6381913", "2017-12-06", "16:30", "Renovação de Visto"}
+                {null, null, null, null},
+
             },
             new String [] {
                 "Codigo de Solicitação", "Data", "Horário", "Descrição"

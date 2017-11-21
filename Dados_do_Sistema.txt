@@ -9,3 +9,56 @@
 17/11/2017 01:52:29 Usuário Carlos Entrou na Opção Arquivo Novo - Agendamento do visto
 17/11/2017 01:52:37 Usuário Carlos Entrou na Opção Arquivo Sair - Encerrando o Sistema
 ========================================================================
+17/11/2017 14:29:02 Usuário Carlos Logou No Sistema 
+17/11/2017 14:29:05 Usuário Carlos Entrou na Opção Arquivo Novo - Agendamento do visto
+17/11/2017 14:29:12 Usuário Carlos Entrou na Opção Arquivo Sair - Encerrando o Sistema
+========================================================================
+20/11/2017 13:59:41 Usuário Carlos Logou No Sistema 
+20/11/2017 13:59:45 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+20/11/2017 17:12:23 Usuário Carlos Logou No Sistema 
+21/11/2017 12:27:13 Usuário Carlos Logou No Sistema 
+21/11/2017 12:27:16 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+21/11/2017 12:27:36 Usuário Carlos Entrou na Opção Arquivo Novo - Agendamento do visto
+21/11/2017 12:29:50 Usuário Carlos Logou No Sistema 
+21/11/2017 12:29:52 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+21/11/2017 12:37:07 Usuário Carlos Entrou na Opção Arquivo Novo - Agendamento do visto
+21/11/2017 12:55:13 Usuário Carlos Logou No Sistema 
+21/11/2017 12:55:17 Usuário Carlos Entrou na Opção Arquivo Novo - Agendamento do visto
+21/11/2017 12:57:58 Usuário Carlos Agendou a Renovação do visto com o Codigo de codigosolicitacao 1221
+21/11/2017 13:01:53 Usuário Carlos Logou No Sistema 
+21/11/2017 13:01:57 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+21/11/2017 13:02:04 Usuário Carlos Limpou o Campos da Pesquisa de Agendamento
+21/11/2017 13:02:08 Usuário Carlos Apagpou o Angendamento que Contem o Código de Solicitão :1221
+21/11/2017 13:02:24 Usuário Carlos Apagpou o Angendamento que Contem o Código de Solicitão :1221
+21/11/2017 13:02:32 Usuário Carlos Apagpou o Angendamento que Contem o Código de Solicitão :1221
+21/11/2017 13:03:20 Usuário Carlos Logou No Sistema 
+21/11/2017 13:03:23 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+21/11/2017 13:03:28 Usuário Carlos Apagpou o Angendamento que Contem o Código de Solicitão :1221
+21/11/2017 13:03:39 Usuário Carlos Limpou o Campos da Pesquisa de Agendamento
+21/11/2017 13:12:58 Usuário Carlos Logou No Sistema 
+21/11/2017 13:13:00 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+21/11/2017 13:18:07 Usuário Carlos Logou No Sistema 
+21/11/2017 13:18:11 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+21/11/2017 13:18:16 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+21/11/2017 13:18:21 Usuário Carlos Entrou na Opção Arquivo Novo - Agendamento do visto
+21/11/2017 13:18:42 Usuário Carlos Agendou a Renovação do visto com o Codigo de codigosolicitacao 12
+21/11/2017 13:18:43 Usuário Carlos Limpou os Campos de Agendamento
+21/11/2017 13:18:48 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+21/11/2017 13:19:57 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+21/11/2017 13:20:01 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+21/11/2017 13:23:27 Usuário Carlos Logou No Sistema 
+21/11/2017 13:23:29 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+21/11/2017 13:23:36 Usuário Carlos Apagpou o Angendamento que Contem o Código de Solicitão :12
+21/11/2017 13:23:37 Usuário Carlos Limpou o Campos da Pesquisa de Agendamento
+21/11/2017 13:23:43 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+21/11/2017 13:23:46 Usuário Carlos Entrou na Opção Arquivo Novo - Agendamento do visto
+21/11/2017 13:24:43 Usuário Carlos Agendou a Renovação do visto com o Codigo de codigosolicitacao 145623
+21/11/2017 13:24:44 Usuário Carlos Limpou os Campos de Agendamento
+21/11/2017 13:24:51 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+21/11/2017 13:25:08 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+21/11/2017 13:25:25 Usuário Carlos Apagou o Estrangeiro que Contem o N' do Passaporte :mj368
+21/11/2017 13:25:31 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+21/11/2017 13:25:40 Usuário Carlos Apagou o Estrangeiro que Contem o N' do Passaporte :MJ368
+21/11/2017 13:25:49 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+21/11/2017 13:25:55 Usuário Carlos Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+21/11/2017 13:26:11 Usuário Carlos Entrou na Opção Cadastro  - Cadastro do Funcionário
