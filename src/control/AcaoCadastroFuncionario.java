@@ -74,6 +74,7 @@ public class AcaoCadastroFuncionario implements ActionListener {
                     Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Cadastrou No Sistema O Funcionário " + nome;
                     dados.gravarArquivodadossistema(nomeArquivo, Dados);
                     db.cadstroestroFuncionario(modelCadastroFuncionario, email, senha);
+                    JOptionPane.showMessageDialog(null, " Cadastro feito com sucesso ");
 
                 } else {
                     JOptionPane.showMessageDialog(null, "Verifica o email esta incorreto");

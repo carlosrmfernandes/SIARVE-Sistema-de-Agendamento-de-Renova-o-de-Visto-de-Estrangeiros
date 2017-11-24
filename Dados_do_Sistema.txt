@@ -7,3 +7,105 @@
 24/11/2017 01:12:59 Usuário Carlos@unesc.net Visualizou quem foram Os Desenvolvedores do sistema
 24/11/2017 01:13:02 Usuário Carlos@unesc.net Entrou na Opção Arquivo Sair - Encerrando o Sistema
 ========================================================================
+24/11/2017 09:54:35 Usuário Carlos@unesc.net Logou No Sistema 
+24/11/2017 09:54:44 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 09:55:03 Usuário Carlos@unesc.net Entrou na Opção Arquivo Novo - Agendamento do visto
+24/11/2017 09:55:07 Usuário Carlos@unesc.net Entrou na Opção Desenvolvedor  - Desenvolvedor do Sistema
+24/11/2017 09:55:08 Usuário Carlos@unesc.net Visualizou quem foram Os Desenvolvedores do sistema
+24/11/2017 09:55:10 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+24/11/2017 09:55:15 Usuário Carlos@unesc.net Entrou na Opção Cadastro  - Cadastro do Funcionário
+24/11/2017 09:55:18 Usuário Carlos@unesc.net Entrou na Opção Cadastro  - Cadastro do Estrangeiro
+24/11/2017 09:55:23 Usuário Carlos@unesc.net Lipou os campos do cadastro de Estrangeiro
+24/11/2017 09:58:24 Usuário Carlos@unesc.net Logou No Sistema 
+24/11/2017 10:02:39 Usuário Carlos@unesc.net Logou No Sistema 
+24/11/2017 10:02:42 Usuário Carlos@unesc.net Entrou na Opção Arquivo Novo - Agendamento do visto
+24/11/2017 10:03:25 Usuário Carlos@unesc.net Agendou a Renovação do visto com o Codigo de codigosolicitacao 1234
+24/11/2017 10:03:28 Usuário Carlos@unesc.net Agendou a Renovação do visto com o Codigo de codigosolicitacao 1234
+24/11/2017 10:03:38 Usuário Carlos@unesc.net Agendou a Renovação do visto com o Codigo de codigosolicitacao 1234
+24/11/2017 10:04:05 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+24/11/2017 10:42:38 Usuário Carlos@unesc.net Logou No Sistema 
+24/11/2017 10:42:41 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+24/11/2017 10:42:48 Usuário Carlos@unesc.net Apagpou o Angendamento que Contem o Código de Solicitão :1234
+24/11/2017 10:42:57 Usuário Carlos@unesc.net Limpou o Campos da Pesquisa de Agendamento
+24/11/2017 10:43:04 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+24/11/2017 10:47:52 Usuário Carlos@unesc.net Logou No Sistema 
+24/11/2017 10:48:27 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 10:48:43 Usuário Carlos@unesc.net Apagou Funcionário com o email ari@unesc.netwer
+24/11/2017 10:48:54 Usuário Carlos@unesc.net Apagou Funcionário com o email ari@unesc.netwer
+24/11/2017 10:49:03 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 10:49:14 Usuário Carlos@unesc.net Apagou Funcionário com o email ari@unesc.net
+24/11/2017 10:49:20 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 10:49:28 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+24/11/2017 10:49:34 Usuário Carlos@unesc.net Apagou o Estrangeiro que Contem o N' do Passaporte :NIOsasdad
+24/11/2017 10:50:18 Usuário Carlos@unesc.net Apagou o Estrangeiro que Contem o N' do Passaporte :NJ978K
+24/11/2017 10:50:23 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 10:50:27 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+24/11/2017 10:50:29 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+24/11/2017 10:50:43 Usuário Carlos@unesc.net Apagpou o Angendamento que Contem o Código de Solicitão :145623
+24/11/2017 10:50:51 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 10:50:55 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+24/11/2017 10:50:58 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+24/11/2017 10:51:02 Usuário Carlos@unesc.net Entrou na Opção Arquivo Novo - Agendamento do visto
+24/11/2017 10:54:15 Usuário Carlos@unesc.net Agendou a Renovação do visto com o Codigo de codigosolicitacao 125893
+24/11/2017 10:55:12 Usuário Carlos@unesc.net Agendou a Renovação do visto com o Codigo de codigosolicitacao 895622
+24/11/2017 10:56:30 Usuário Carlos@unesc.net Agendou a Renovação do visto com o Codigo de codigosolicitacao 58232
+24/11/2017 10:56:34 Usuário Carlos@unesc.net Começou um Novo Agendamento
+24/11/2017 10:56:35 Usuário Carlos@unesc.net Limpou os Campos de Agendamento
+24/11/2017 10:56:50 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+24/11/2017 10:57:11 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 10:57:15 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+24/11/2017 10:57:25 Usuário Carlos@unesc.net Entrou na Opção Cadastro  - Cadastro do Estrangeiro
+24/11/2017 10:57:32 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+24/11/2017 10:57:44 Usuário Carlos@unesc.net Entrou na Opção Cadastro  - Cadastro do Estrangeiro
+24/11/2017 11:01:07 Usuário Carlos@unesc.net Cadastrou No Sistema O Estrangeiro Fernandes de Almeida
+24/11/2017 11:14:49 Usuário Carlos@unesc.net Cadastrou No Sistema O Estrangeiro Rafaela de Rosa
+24/11/2017 11:15:14 Usuário Carlos@unesc.net Cadastrou No Sistema O Estrangeiro Rafaela de Rosa
+24/11/2017 11:16:32 Usuário Carlos@unesc.net Cadastrou No Sistema O Estrangeiro Carlos Rafael
+24/11/2017 11:16:38 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+24/11/2017 11:16:42 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+24/11/2017 11:16:53 Usuário Carlos@unesc.net Entrou na Opção Cadastro  - Cadastro do Funcionário
+24/11/2017 11:16:56 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 11:17:05 Usuário Carlos@unesc.net Entrou na Opção Cadastro  - Cadastro do Funcionário
+24/11/2017 11:19:31 Usuário Carlos@unesc.net Cadastrou No Sistema O Funcionário Rafael Francisco
+24/11/2017 11:19:37 Usuário Carlos@unesc.net Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 11:19:43 Usuário Carlos@unesc.net Entrou na Opção Arquivo Sair - Encerrando o Sistema
+========================================================================
+24/11/2017 11:21:53 Usuário rafael@hotmail.com Logou No Sistema 
+24/11/2017 11:21:57 Usuário rafael@hotmail.com Entrou na Opção Arquivo Sair - Encerrando o Sistema
+========================================================================
+24/11/2017 11:47:57 Usuário rafael@hotmail.com Logou No Sistema 
+24/11/2017 11:47:59 Usuário rafael@hotmail.com Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 11:48:44 Usuário rafael@hotmail.com Logou No Sistema 
+24/11/2017 11:48:49 Usuário rafael@hotmail.com Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 11:52:20 Usuário rafael@hotmail.com Logou No Sistema 
+24/11/2017 11:52:22 Usuário rafael@hotmail.com Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 11:54:29 Usuário rafael@hotmail.com Logou No Sistema 
+24/11/2017 11:54:32 Usuário rafael@hotmail.com Entrou na Opção Cadastro  - Cadastro do Funcionário
+24/11/2017 11:54:39 Usuário rafael@hotmail.com Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 11:55:24 Usuário rafael@hotmail.com Logou No Sistema 
+24/11/2017 11:55:26 Usuário rafael@hotmail.com Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 11:56:18 Usuário rafael@hotmail.com Logou No Sistema 
+24/11/2017 11:56:21 Usuário rafael@hotmail.com Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 11:56:41 Usuário rafael@hotmail.com Entrou na Opção Cadastro  - Cadastro do Funcionário
+24/11/2017 11:57:18 Usuário rafael@hotmail.com Cadastrou No Sistema O Funcionário Fernandes
+24/11/2017 11:57:25 Usuário rafael@hotmail.com Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 11:57:39 Usuário rafael@hotmail.com Apagou Funcionário com o email vieira@unesc.net
+24/11/2017 11:57:43 Usuário rafael@hotmail.com Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 12:00:06 Usuário rafael@hotmail.com Logou No Sistema 
+24/11/2017 12:00:43 Usuário rafael@hotmail.com Entrou na Opção Arquivo Novo - Agendamento do visto
+24/11/2017 12:01:07 Usuário rafael@hotmail.com Entrou na Opção Cadastro  - Cadastro do Estrangeiro
+24/11/2017 12:01:51 Usuário rafael@hotmail.com Entrou na Opção Arquivo Novo - Agendamento do visto
+24/11/2017 12:02:31 Usuário rafael@hotmail.com Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+24/11/2017 12:04:15 Usuário rafael@hotmail.com Entrou na Opção Cadastro  - Cadastro do Funcionário
+24/11/2017 12:05:42 Usuário rafael@hotmail.com Entrou na Opção Checagem / Remover Funcionário  - Chegar Estrangeiro
+24/11/2017 12:05:46 Usuário rafael@hotmail.com Entrou na Opção Checagem / Remover Funcionário  - Chegar Agendamento
+24/11/2017 12:06:48 Usuário rafael@hotmail.com Entrou na Opção Cadastro  - Cadastro do Funcionário
+24/11/2017 12:07:27 Usuário rafael@hotmail.com Entrou na Opção Checagem / Remover Funcionário  - Remover Funcionário
+24/11/2017 12:08:04 Usuário rafael@hotmail.com Entrou na Opção Sobre  - Sobre o Sistema
+24/11/2017 12:08:06 Usuário rafael@hotmail.com Entrou na Opção Ajuda  - Ajuda do Sistema
+24/11/2017 12:08:08 Usuário rafael@hotmail.com Entrou na Opção Desenvolvedor  - Desenvolvedor do Sistema
+24/11/2017 12:08:11 Usuário rafael@hotmail.com Visualizou quem foram Os Desenvolvedores do sistema
+24/11/2017 12:08:35 Usuário rafael@hotmail.com Entrou na Opção Arquivo Sair - Encerrando o Sistema
+========================================================================
+24/11/2017 12:45:25 Usuário rafael@hotmail.com Logou No Sistema 
+24/11/2017 12:45:30 Usuário rafael@hotmail.com Entrou na Opção Arquivo Novo - Agendamento do visto

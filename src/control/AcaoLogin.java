@@ -30,7 +30,7 @@ public class AcaoLogin implements ActionListener {
     private DadosdoSistemas dados = new DadosdoSistemas();
     private String Dados = null;
     private String nomeArquivodadossistema = "Dados_do_Sistema.txt";
-    LoginDB bd = new LoginDB();
+    private LoginDB bd = new LoginDB();
 
     public AcaoLogin(Login login) {
         this.login = login;
@@ -93,6 +93,9 @@ public class AcaoLogin implements ActionListener {
             Dados = getDateTime() + " Usuário " + user + " Logou No Sistema ";
             dados.gravarArquivodadossistema(nomeArquivodadossistema, Dados);
 
+        } else {
+            JOptionPane.showMessageDialog(null, "Email ou senha incorreto !...", "", JOptionPane.ERROR_MESSAGE);
+            return;
         }
 
     }

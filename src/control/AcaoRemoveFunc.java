@@ -59,6 +59,7 @@ public class AcaoRemoveFunc implements ActionListener {
                 Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Apagou Funcionário com o email " + email;
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
                 db.delete(email);
+                JOptionPane.showMessageDialog(null, " Funcionário "+email+" Foi removido");
             }
         }
     }

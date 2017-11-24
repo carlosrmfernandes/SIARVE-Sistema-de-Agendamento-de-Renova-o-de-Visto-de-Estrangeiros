@@ -53,6 +53,7 @@ public class AcaoChecarAgendamento implements ActionListener {
             Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Apagpou o Angendamento que Contem o Código de Solicitão :" + pesquisar;
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
             db.delete(pesquisar);
+            JOptionPane.showMessageDialog(null, " O agendamento "+pesquisar+" Foi removido");
 
         }
         if ("limpar".equals(e.getActionCommand())) {

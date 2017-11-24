@@ -10,4 +10,6 @@ SET SCHEMA PUBLIC
 INSERT INTO CADASTROESTRANGEIRO VALUES('NJ978K','(25)698745896','Rafael Francisco Fernandes','Luanda 78','fernandes@unesc.net','2017-11-16','Solteiro','Estudante','125.369.854-41','Criciuma','Santa Catarina','Masculino')
 INSERT INTO AGENDAMENTO VALUES(145623,'NJ12KLU','Renovacao de Visto','2017-11-16','8:00','Estudante','Masculino','Carlos@unesc.net','(48)996684418','Carlos')
 INSERT INTO LOGIN VALUES('Carlos@unesc.net','123')
+INSERT INTO LOGIN VALUES('ari@unesc.net','1234567890')
 INSERT INTO CADASTROFUNCIONARIO VALUES('Carlos@unesc.net','Lunada','213.123.412-42','2017-11-22','Fisica','Santa Catarina','(12)342342342','Masculino','Carlos Fernandes','Santa Catarina')
+INSERT INTO CADASTROFUNCIONARIO VALUES('ari@unesc.net','Lunada','872.387.439-84','2017-11-09','Fisica','Santa Catarina','(21)345678654','Masculino','carlos','Santa Catarina')

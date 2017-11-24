@@ -50,13 +50,25 @@ public class ChecarFunc extends javax.swing.JInternalFrame {
 
                     return item.getEmail();
                 }
+                if (column == 1) {
+
+                    return item.getCpf();
+                }
+                if (column == 2) {
+
+                    return item.getNome();
+                }
+                if (column == 3) {
+
+                    return item.getCelular();
+                }
 
                 return null;
             }
 
             @Override
             public int getColumnCount() {
-                return 1;//TODO: Ajustar de acordo com o número de colunas
+                return 4;//TODO: Ajustar de acordo com o número de colunas
             }
 
             @Override
@@ -103,10 +115,10 @@ public class ChecarFunc extends javax.swing.JInternalFrame {
         jtbDados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
-                {null}
+                {null},{null},{null},{null},{null}
             },
             new String [] {
-                "Email do Funcionário"
+                "Email do Funcionário","CPF","Nome","Celular"
             }
         ));
         jScrollPane1.setViewportView(jtbDados);

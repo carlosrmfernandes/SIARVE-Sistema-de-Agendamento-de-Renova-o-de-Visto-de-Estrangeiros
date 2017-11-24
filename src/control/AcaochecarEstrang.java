@@ -42,23 +42,6 @@ public class AcaochecarEstrang implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
 
-        //funca de Busnca 
-//        if ("buscar".equals(e.getActionCommand())) {
-//            try {
-//                modelchecarEstrang = checarestrang.getModelChecarestrang();
-//            } catch (Excesao ex) {
-//                JOptionPane.showMessageDialog(null, ex.getMessage());
-//                return;
-//            }
-//            modelchecarEstrang.getNumpassap();
-//            numpassap = modelchecarEstrang.getNumpassap();
-//
-//            Dados = getDateTime() + " Usuário " + dados.lerArquivo(nomeArquivoLogin) + " Pesquisou Pelo Estrangeiro que Contem o N' do Passaporte :" + numpassap;
-//            dados.gravarArquivodadossistema(nomeArquivo, Dados);
-//
-//            System.out.println("Numero do Passaporte : " + numpassap);
-//
-//        }
         if ("apagar".equals(e.getActionCommand())) {
             try {
                 modelchecarEstrang = checarestrang.getModelChecarestrang();
@@ -72,6 +55,7 @@ public class AcaochecarEstrang implements ActionListener {
             dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
             dbcontrol.delete(numpassap);
+            JOptionPane.showMessageDialog(null, " Estrangeiro com o numero de Passaporte : " + numpassap + " Foi removido");
         }
     }
 

@@ -34,7 +34,7 @@ public class AcaoInternalFrameCadastro implements ActionListener {
     private final String nomeArquivoLogin = "Ultimo_Login.txt";
 
     private String emailv = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
-    DadosControleDbAngendamento db = new DadosControleDbAngendamento();
+    private DadosControleDbAngendamento db = new DadosControleDbAngendamento();
 
     public AcaoInternalFrameCadastro(InternalFrameCadastro cadastro) {
         this.cadastro = cadastro;
@@ -79,6 +79,7 @@ public class AcaoInternalFrameCadastro implements ActionListener {
                 dados.gravarArquivodadossistema(nomeArquivo, Dados);
 
                 db.cadstroestroAgendamento(intelnalframecadastro, dados.lerArquivo(nomeArquivoLogin));
+                JOptionPane.showMessageDialog(null, " Agendamento feito com sucesso ");
             }
 
         }

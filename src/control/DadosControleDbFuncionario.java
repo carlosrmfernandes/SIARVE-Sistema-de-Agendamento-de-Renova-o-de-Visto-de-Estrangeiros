@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Vector;
 import modelo.ModelCadastroFuncionario;
 
-
 /**
  *
  * @author Polo UAB
@@ -37,15 +36,21 @@ public class DadosControleDbFuncionario {
         PreparedStatement ps = null;
         try {
             conn = Conexao.getConnection();
-            String sql = "select email from CADASTROFUNCIONARIO";
+            String sql = "select email,cpf,nome,celular from CADASTROFUNCIONARIO";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 String email = rs.getString(1);
+                String cpf = rs.getString(2);
+                String nome = rs.getString(3);
+                String celular = rs.getString(4);
 
                 ModelCadastroFuncionario p = new ModelCadastroFuncionario();
                 p.setEmail(email);
+                p.setCpf(cpf);
+                p.setNome(nome);
+                p.setCelular(celular);
                 lista.add(p);
             }
         } catch (SQLException e) {
