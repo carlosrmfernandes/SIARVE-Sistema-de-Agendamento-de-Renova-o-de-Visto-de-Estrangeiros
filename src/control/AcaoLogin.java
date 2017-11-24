@@ -30,6 +30,7 @@ public class AcaoLogin implements ActionListener {
     private DadosdoSistemas dados = new DadosdoSistemas();
     private String Dados = null;
     private String nomeArquivodadossistema = "Dados_do_Sistema.txt";
+    LoginDB bd = new LoginDB();
 
     public AcaoLogin(Login login) {
         this.login = login;
@@ -83,14 +84,16 @@ public class AcaoLogin implements ActionListener {
 
             JOptionPane.showMessageDialog(null, "Deve informar o nome do usuário e senha !...", "", JOptionPane.ERROR_MESSAGE);
             return;
-        } else {
+        } else if (bd.Login(user, password) == true) {
+
             login.dispose();
+            new PosLogin().setVisible(true);
+            String nomeArquivo = "Ultimo_Login.txt";
+            gravarArquivoUltimoLogin(nomeArquivo, user);
+            Dados = getDateTime() + " Usuário " + user + " Logou No Sistema ";
+            dados.gravarArquivodadossistema(nomeArquivodadossistema, Dados);
+
         }
-        new PosLogin().setVisible(true);
-        String nomeArquivo = "Ultimo_Login.txt";
-        gravarArquivoUltimoLogin(nomeArquivo, user);
-        Dados = getDateTime() + " Usuário " + user + " Logou No Sistema ";
-        dados.gravarArquivodadossistema(nomeArquivodadossistema, Dados);
 
     }
 
